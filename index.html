@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Betrayal at House on the Hill Viet Hoa</title>
+    <link rel="stylesheet" href="/wiki_webpage/Website/css/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/b89ba1819a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400&family=Baloo+Tamma+2&family=Grandstander&family=Grenze+Gotisch&family=Itim&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    
+<body class="box">
+    <header class="d-flex jc-space-between ai-center">
+        <h2 class="logo">Betrayal at House on the Hill</h2>
+        <div class="search d-flex jc-right ai-center">
+            <div class="search-bar d-flex pos-rel jc-space-between ai-center">
+                <input type="text" placeholder="Search..." id="mySearch">
+                <i class="fa-solid fa-xmark" id="icon-clear"></i>
+                <div class="search-box pos-abs hide" id="search-box"></div>
+                <template search-result-list>
+                    <div>
+                        <a href="#" link>
+                            <img src="" alt="">
+                            <div class="search-content">
+                                <h2 name></h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </template>
+            </div>
+            <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+            
+        </div>
+        <div class="language d-flex jc-right ai-center">
+            <h2 class="color-white" id="vietnamese">Tiếng Việt</h2>
+            <img src="/wiki_webpage/Website/assets/img/Line 4.svg" style="margin-right: 0.5em;margin-left: 0.5em;">
+            <h2 class="color-green text-underline" id="english">English</h2>
+        </div>
+    </header>
+
+    <section class="sub-container d-flex jc-space-around ai-center">
+        <!-- <span style="flex:1"></span> -->
+        <div class="card-menu pos-rel">
+            <span class="card-bg pos-rel d-flex jc-center ai-center">
+                <img src="/wiki_webpage/Website/assets/img/card_omen_blank.svg" alt="Rule Section">
+                <ul class="card-list pos-abs" card-list-container></ul>
+                <template data-card-list-template>
+                    <li class="card pos-rel d-flex jc-space-between ai-center">
+                        <h2 class="card-list-details" data-header></h2>
+                    </li>
+                </template>  
+            </span>
+        </div>
+        <div class="space pos-rel"></div>
+        
+        <div class="content-area pos-rel jc-left">
+                <ul class="content-list" content-list-container></ul>
+                <template content-list-template>
+                    <li class="content" >
+                        <div class="row_name">
+                            <h2 class="content-title">Click</h2>
+                            <p class="content-description">What is Lorem Ipsum?</p>
+                        </div>
+                        <div class="row_detail">
+                            <p class="content-detail">What is Lorem Ipsum?</p>
+                        </div>
+                    </li>
+                </template>
+        </div>
+
+    </section>
+
+    <footer class="">
+        <ul class="menu d-flex jc-right ai-center">
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Luật Chơi</span>
+                <button id="rule_btn" value="rule">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/icon_book.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Sự Kiện</span>
+                <button id="event_btn" value="event">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/icon_event.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Vật Phẩm</span>
+                <button id="item_btn" value="item">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/icon_item.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Điềm Báo</span>
+                <button id="omen_btn" value="omen">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/icon_omen.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Lát Phòng</span>
+                <button id="room_btn" value="room">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/icon_room.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list d-flex fd-column jc-center ai-center">
+                <span class="texttile pos-abs">Tham Khảo</span>
+                <button id="ref_btn" value="ref">
+                    <span class="icon pos-rel d-flex jc-center">
+                        <img src="/wiki_webpage/Website/assets/img/BetrayalHouseHill_v4.svg">
+                    </span>
+                </button>
+            </li>
+            <li class="list">
+                <button id="scan_btn" value="scan">
+                </button>
+            </li>
+        </ul>
+    </footer>
+    <section class="container pos-abs d-flex jc-space-between ai-center" style="justify-content: center;">
+
+        <video src="Website/assets/media/Rain FX Comp_no_word.mp4" muted autoplay></video>
+        
+        <div class="overlay pos-abs"></div>
+        
+        <div class="text pos-rel ji-center ai-baseline blur-anim" id="title">
+            <div class="inline d-inline-flex ji-center"><h2>Betrayal</h2><p >at</p></div>
+            <div class="inline d-inline-flex ji-center jc-right"><h3>House</h3><p >on the</p><h3>Hill</h3></div>
+        </div>
+    </section>
+</body>
+
+</html>
+<script src="/wiki_webpage/Website/js/script.js"></script>
