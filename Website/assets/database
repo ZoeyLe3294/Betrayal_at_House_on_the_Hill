@@ -1,0 +1,794 @@
+[
+    {
+        "id": "1",
+        "category": "item",
+        "name": "Axe ",
+        "language": "vi",
+        "context": "Rất bén",
+        "detail": "Tăng 1 cục xúc xắc khi thực hiện tấn công"
+    },
+    {
+        "id": "2",
+        "category": "item",
+        "name": "Sacrificial Dagger ",
+        "language": "vi",
+        "context": "1 mảnh sắt được tạo hình và bao phủ bởi những biểu tượng bí ẩn và nhuốm màu máu ",
+        "detail": "Tăng 3 cục xúc xắc cho tấn công Might\nĐổi lại: đổ Knowledge xúc xắc\n6+ Bình an\n3-5 Mất 1 điểm tinh thần\n0-2 Nhận 2 xúc xắc phản dame vật lý và không thể thực hiện tấn công"
+    },
+    {
+        "id": "3",
+        "category": "item",
+        "name": "Blood Dagger ",
+        "language": "vi",
+        "context": "Con dao 2 lưỡi. Hút máu chủ sở hữu để hoạt động ",
+        "detail": "Sử dụng 1 Speed tăng 3 cục xúc xắc khi thực hiện tấn công.\nKhông thể bỏ lại hoặc trao đổi\nNếu bị cướp, chịu 2 cục xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "4",
+        "category": "item",
+        "name": "Revolver ",
+        "language": "vi",
+        "context": "Món vũ khí tuy cũ nhưng có lực ",
+        "detail": "Tăng 1 cục xúc xắc cho tấn công tầm gần hoặc tầm xa bằng Speed và gây sát thương vật lý"
+    },
+    {
+        "id": "5",
+        "category": "item",
+        "name": "Medical Kit ",
+        "language": "vi",
+        "context": "Túi y tế  ",
+        "detail": "Đổ Knowledge để có cơ hội hồi máu khởi điểm cho bản thân hoặc đồng minh cùng phòng:\n8+ Tăng tối đa 3 điểm chỉ số vật lý\n6-7 Tăng tối đa 2 điểm chỉ số vật lý\n4-5 Tăng 1 điểm chỉ số vật lý\n0-3 Không hiệu quả"
+    },
+    {
+        "id": "6",
+        "category": "item",
+        "name": "Healing Salve ",
+        "language": "vi",
+        "context": "1 hỗn hợp keo dính trong 1 cái tô rỗng ",
+        "detail": "Hồi Might và Speed về lại khởi điểm cho bản thân hoặc cho 1 người cùng phòng\n1 lần/game"
+    },
+    {
+        "id": "7",
+        "category": "item",
+        "name": "Smelling Salts ",
+        "language": "vi",
+        "context": "Hít! 1 hơi đầy lồng ngực ",
+        "detail": "Hồi chỉ số Knowledge về khởi điểm cho bản thân hoặc cho 1 người cùng phòng\n1 lần/game"
+    },
+    {
+        "id": "8",
+        "category": "item",
+        "name": "Bottle ",
+        "language": "vi",
+        "context": "1 cái chai đục chứa 1 chất dịch đen bên trong ",
+        "detail": "Sau khi kích hoạt Haunted, bạn có thể đổ 3 xúc xắc để uống nước trong lọ và nhận hiệu ứng sau:\n6 Tiến tới 1 phòng bất kỳ\n5 Nhận 2 Might, 2 Speed\n4 Nhận 2 Knowledge, 2 Sanity\n3 Nhận 1 Knowledge, Mất 1 Might\n2 Mất 2 Knowledge, 2 Sanity\n1 Mất 2 Might, 2 Speed\n0 Mất 2 điểm ở mọi chỉ số\n1 lần/game"
+    },
+    {
+        "id": "9",
+        "category": "item",
+        "name": "Amulet Of The Ages ",
+        "language": "vi",
+        "context": "Vòng đeo bằng bạc cổ, khảm ngọc và lan tỏa phước lành ",
+        "detail": "Tăng 1 Might, 1 Speed, 1 Knowledge, 1 Sanity khi sở hữu vật phẩm"
+    },
+    {
+        "id": "10",
+        "category": "item",
+        "name": "Pickpocket’S Gloves ",
+        "language": "vi",
+        "context": "Tự lực cánh sinh chưa bao giờ dễ dàng đến thế ",
+        "detail": "Sử dụng item này để lấy 1 vật phẩm bất kỳ từ 1 người cùng phòng\n1 lần / game"
+    },
+    {
+        "id": "11",
+        "category": "item",
+        "name": "Armor ",
+        "language": "vi",
+        "context": "Bộ giáp đạo cụ từ 1 hộ chợ thời kỳ Phục Hưng, dù sao thì vẫn làm bằng kim loại ",
+        "detail": "Giảm 1 dame cho bất kỳ sát thương vật lý ở mọi thời điểm\nKhông thể bị cướp"
+    },
+    {
+        "id": "12",
+        "category": "item",
+        "name": "Rabbit’S Foot ",
+        "language": "vi",
+        "context": "Chú thỏ xấu số ",
+        "detail": "Đổ lại 1 cục xúc xắc"
+    },
+    {
+        "id": "13",
+        "category": "item",
+        "name": "Idol ",
+        "language": "vi",
+        "context": "Có lẽ nó chọn bạn cho 1 mục đích cao cả hơn. Như là hiến mạng ",
+        "detail": "Sử dụng 1 Sanity tăng 2 cục xúc xắc cho lần đổ xúc xắc bất kỳ"
+    },
+    {
+        "id": "14",
+        "category": "item",
+        "name": "Dark Dice ",
+        "language": "vi",
+        "context": "Thời tới rồi ? ",
+        "detail": "Đổ 3 cục xúc xắc:\n6 Dịch chuyển tới 1 người phe chính diện\n5 Đá 1 người cùng phòng sang phòng bên cạnh\n4 Tăng 1 chỉ số vật lý\n3 Dịch chuyển sang phòng bên cạnh\n2 Tăng 1 điểm tinh thần\n1 Rút 1 lá event\n0 Giảm tất cả chỉ số xuống mức thấp nhất rồi Vứt luôn lá này"
+    },
+    {
+        "id": "15",
+        "category": "item",
+        "name": "Music Box ",
+        "language": "vi",
+        "context": "Món trang trí thủ công cổ, phát ra 1 giai điệu ma mị, đeo bám tâm trí bạn ",
+        "detail": "Chọn trạng thái Mở hoặc Đóng Music Box\nMở: Nhân vật có Sanity cùng phòng phải đổ Sanity xúc xắc 4+. Thất bại, sẽ chịu hiệu ứng lú. Chủ sở hữu bị lú sẽ làm rớt Music Box xuống sàn\nĐóng: Loại bỏ hiệu ứng lú"
+    },
+    {
+        "id": "16",
+        "category": "item",
+        "name": "Candle ",
+        "language": "vi",
+        "context": "Làm di chuyển hình bóng - ít nhất, bạn hy vọng nó sẽ làm được như vậy ",
+        "detail": "Tăng 1 cục xúc xắc khi đổ xúc xắc cho event card\nKhi sở hữu cả 3 vật phẩm Bell, Book và Candle tăng 2 điểm mỗi chỉ số"
+    },
+    {
+        "id": "17",
+        "category": "item",
+        "name": "Lucky Stone ",
+        "language": "vi",
+        "context": "1 hòn đá nhẵn bình thường nhưng bạn lại cảm thấy vận may từ nó ",
+        "detail": "Chọn lại cục xúc xắc(s) bất kỳ để đổ lại trong bất kỳ lượt đổ\n1 lần / game"
+    },
+    {
+        "id": "18",
+        "category": "item",
+        "name": "Angel Feather ",
+        "language": "vi",
+        "context": "Phe phẩy trong tay 1 chiếc lông hoàn hảo ",
+        "detail": "Chọn kết quả cho 1 lần đổ xúc xắc bất kỳ\n1 lần/game"
+    },
+    {
+        "id": "19",
+        "category": "item",
+        "name": "Bell ",
+        "language": "vi",
+        "context": "Chuông đồng kêu vang ",
+        "detail": "Tăng 1 Sanity khi sở hữu\nĐổ Sanity xúc xắc:\n5+: kéo 1 người chơi lại gần bạn 1 ô\n<5 & explorer: bị 1 quái tiến lại gần bạn 1 ô\n<5 & traitor: miễn\n<5 & 0 traitor: toàn bộ quái tiến lại gần bạn 1 ô\nKhi sở hữu cả 3 vật phẩm Bell, Book và Candle tăng 2 điểm mỗi chỉ số"
+    },
+    {
+        "id": "20",
+        "category": "item",
+        "name": "Puzzle Box",
+        "language": "vi",
+        "context": "Hẳn có cách phá hộp ",
+        "detail": "Phá hộp Puzzle bằng cách đổ Knowledge xúc xắc +6 để nhận 2 thẻ vật phẩm\nHộp chỉ mở 1 lần"
+    },
+    {
+        "id": "21",
+        "category": "item",
+        "name": "Dynamite",
+        "language": "vi",
+        "context": "Kích sắp nổ ",
+        "detail": "Thay vì attack bình thường, bạn có thể ném bom sang phòng kế bên. Mỗi người và quái trong phòng đó phải đổ Speed xúc xắc:\n5+ Bình an\n0-4 Nhận 4 sát thương vật lý\n1 lần/game"
+    },
+    {
+        "id": "22",
+        "category": "item",
+        "name": "Adrenaline Shot",
+        "language": "vi",
+        "context": "Ống tiêm chứa 1 chất lỏng dạ quang kỳ lạ ",
+        "detail": "Chích vào người trước khi đổ xúc xắc để cộng thêm 4 điểm cho kết quả đổ\n1 lần/game"
+    },
+    {
+        "id": "23",
+        "category": "omen",
+        "name": "Madman",
+        "language": "vi",
+        "context": "1 người điên thuần túy ",
+        "detail": "Tăng 2 Might, mất 1 Sanity khi sở hữu vật phẩm\nVật phẩm không thể làm rơi, trao đổi hoặc bị cướp"
+    },
+    {
+        "id": "24",
+        "category": "omen",
+        "name": "Girl",
+        "language": "vi",
+        "context": "1 cô bé. Bị kẹt. Đơn độc. Bạn giải thoát cho cô ấy! ",
+        "detail": "Tăng 1 Sanity, 1 Knowledge khi sở hữu vật phẩm"
+    },
+    {
+        "id": "25",
+        "category": "omen",
+        "name": "Dog",
+        "language": "vi",
+        "context": "1 con chó ghẻ có vẻ thân thiện. Ít nhất là bạn hy vọng vậy. ",
+        "detail": "Tăng 1 Might, 1 Sanity khi sở hữu vật phẩm\nDog có thể đến phòng đã mở cách tối đa 6 ô, nhặt lên hoặc bỏ xuống 1 vật phẩm trước khi quay lại chủ nhân\nKhông bị ảnh hưởng làm chậm, không thể đi đường 1 chiều và không thể tương tác với phòng"
+    },
+    {
+        "id": "26",
+        "category": "omen",
+        "name": "Holy Symbol",
+        "language": "vi",
+        "context": "1 biểu tượng yên bình trong 1 thế giới hỗn độn ",
+        "detail": "Tăng 2 Sanity khi sở hữu vật phẩm"
+    },
+    {
+        "id": "27",
+        "category": "omen",
+        "name": "Spear",
+        "language": "vi",
+        "context": "Món vũ khí kích sức mạnh ",
+        "detail": "Tăng 2 cục xúc xắc khi thực hiện tấn công"
+    },
+    {
+        "id": "28",
+        "category": "omen",
+        "name": "Crystal Ball",
+        "language": "vi",
+        "context": "Những hình ảnh mờ ảo hiện lên trong lớp thủy tinh ",
+        "detail": "Sau khi kích hoạt Haunted\nĐổ Knowledge xúc xắc để có cơ hội nhìn thấy tương lai\n4+ Chọn 1 item hoặc 1 event tùy ý rồi đặt lên trên chồng bài đã xào lại ở dưới\n1-3 Mất 1 Sanity\n0 Mất 2 Sanity"
+    },
+    {
+        "id": "29",
+        "category": "omen",
+        "name": "Book",
+        "language": "vi",
+        "context": "Là nhật ký hay ghi chép nghiên cứu? Tài liệu cổ hay chuyện kể đương đại? ",
+        "detail": "Tăng 2 Knowledge khi sở hữu vật phẩm\nKhi sở hữu cả 3 vật phẩm Bell, Book và Candle tăng 2 điểm mỗi chỉ số"
+    },
+    {
+        "id": "30",
+        "category": "omen",
+        "name": "Ring",
+        "language": "vi",
+        "context": "1 chiếc nhẫn không lành lặn với 1 dòng chữ không thể đọc ",
+        "detail": "Có khả năng tấn công Sanity với nhân vật có Sanity"
+    },
+    {
+        "id": "31",
+        "category": "omen",
+        "name": "Spirit Board",
+        "language": "vi",
+        "context": "1 tấm bảng với chữ và số để gọi người chết ",
+        "detail": "Trước khi di chuyển, có thể xem 1 lát phòng tiếp theo\nNếu đã kích hoạt Haunted, 1 quái do traitor điều khiển sẽ tiến tới bạn 1 ô\nvà nếu 0 traitor, tất cả quái sẽ tiến tới bạn 1 ô"
+    },
+    {
+        "id": "32",
+        "category": "omen",
+        "name": "Mask",
+        "language": "vi",
+        "context": "Mặt nạ che giấu biểu cảm ",
+        "detail": "Đổ Sanity xúc xắc để sử dụng:\n4+ đeo vào sẽ tăng 2 Knowledge, mất 2 Sanity; hoặc tháo ra sẽ tăng 2 Sanity, mất 2 Knowledge\n0-3 không thể sử dụng Mask"
+    },
+    {
+        "id": "33",
+        "category": "omen",
+        "name": "Skull",
+        "language": "vi",
+        "context": "1 cái đầu lâu, nứt nẻ và không răng ",
+        "detail": "Nhận dame vật lý khi bản thân bị tấn công tinh thần"
+    },
+    {
+        "id": "34",
+        "category": "omen",
+        "name": "Medallion",
+        "language": "vi",
+        "context": "1 cái mề đay khắc hình sao năm cánh ",
+        "detail": "Miễn nhiễm hiệu ứng của Pentagram Chamber, Crypt, và Graveyard"
+    },
+    {
+        "id": "35",
+        "category": "omen",
+        "name": "Bite",
+        "language": "vi",
+        "context": "1 tiếng gầm gừ, mùi của cái chết. Nỗi đau. Bóng tối. Mất mát. ",
+        "detail": "Bạn bị người bên phải cắn với 4 điểm Might, hãy tự vệ như bình thường\nVật phẩm không thể làm rơi, trao đổi hoặc bị cướp"
+    },
+    {
+        "id": "36",
+        "category": "event",
+        "name": "A Moment Of Hope",
+        "language": "vi",
+        "context": "Căn phòng này cho cảm giác rất ổn. Thứ gì đó ở đây đang chống lại sự xấu xa của căn nhà ",
+        "detail": "Phe chính diện được thêm 1 cục xúc xắc khi thực hiện đổ xúc xắc chỉ số tại phòng này"
+    },
+    {
+        "id": "37",
+        "category": "event",
+        "name": "Angry Being",
+        "language": "vi",
+        "context": "Trồi ra trong đống nhầy nhụa trên tường sát bên ",
+        "detail": "Đổ Speed xúc xắc\n5+ Tăng 1 Speed\n2-4 Nhận 1 cục xúc xắc sát thương tinh thần\n0-1 Nhận 1 cục xúc xắc sát thương tinh thần, 1 cục xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "38",
+        "category": "event",
+        "name": "Bloody Vision",
+        "language": "vi",
+        "context": "Căn phòng này ướt nhẹp máu là máu. Máu chảy từ trên trần, xuống thành tường, dính đầy trên nội thất, và rơi lên giày bạn. Chớp mắt, viễn cảnh tan biến ",
+        "detail": "Đổ Sanity xúc xắc\n4+ Tăng 1 Sanity\n2-3 Mất 1 Sanity\n0-1 Tấn công 1 nhân vật hoặc 1 quái vật cùng phòng hoặc phòng bên cạnh"
+    },
+    {
+        "id": "39",
+        "category": "event",
+        "name": "Burning Man",
+        "language": "vi",
+        "context": "1 người đàn ông bốc cháy chạy xuyên qua căn phòng. Lớp da phồng rộp rồi nổ ra bung bét, tróc thành từng mảng. Cuối cùng, chỉ còn lại 1 hộp sọ rực lửa, rơi xuống sàn, nảy lên vài cái, lăn đi vài vòng rồi biến mất vào hư vô ",
+        "detail": "Đổ Sanity xúc xắc\n4+ Tăng 1 Sanity\n2-3 Chạy đến Entrance Hall\n0-1 Nhận 1 cục xúc xắc sát thương vật lý, 1 cục xúc xắc sát thương tinh thần"
+    },
+    {
+        "id": "40",
+        "category": "event",
+        "name": "Closet Door",
+        "language": "vi",
+        "context": "Cánh tủ quần áo đó đang mở...chỉ he hé thôi. Chắc bên trong có gì đó ",
+        "detail": "Mỗi lượt có thể thử đổ 2 cục xúc xắc để mở Closet Door\n4 Nhận 1 item\n2-3 Mở 1 event\n0-1 Mở 1 event và vứt luôn lá này"
+    },
+    {
+        "id": "41",
+        "category": "event",
+        "name": "Creepy Crawlies",
+        "language": "vi",
+        "context": "Hàng ngàn con bọ tràn ra, bám đầy lên da, chui vào trong quần áo và đầu tóc ",
+        "detail": "Đổ Sanity xúc xắc\n5+ Tăng 1 Sanity\n1-4 Mất 1 Sanity\n0 Mất 2 Sanity"
+    },
+    {
+        "id": "42",
+        "category": "event",
+        "name": "Creepy Puppet",
+        "language": "vi",
+        "context": "Bạn rợn người khi thấy 1 con búp bê giữa đám búp bê trong phòng. Đột nhiên, nó nhày về phía bạn với 1 ngọn giáo nhỏ ",
+        "detail": "Nhân vật bên phải tấn công bạn với 4 Might, hãy tự vệ đợt tấn công.\nNếu bạn nhận sát thương, nhân vật khác cầm Spear nhận 2 Might"
+    },
+    {
+        "id": "43",
+        "category": "event",
+        "name": "Debris",
+        "language": "vi",
+        "context": "Thạch cao trên trần nhà và trên vách tường đột nhiên đổ sập ",
+        "detail": "Đổ Speed xúc xắc\n3+ Tăng 1 Speed\n1-2 Nhận 1 cục xúc xắc sát thương vật lý và bị chôn vùi\n0 Nhận 2 cục xúc xắc sát thương vật lý và bị chôn vùi\nBị chôn vùi sẽ không thể làm gì trong tối đa 3 lần thất bại giải thoát cho đến khi bạn hoặc người khác giải cứu bằng cách đổ Might xúc xắc 4+"
+    },
+    {
+        "id": "44",
+        "category": "event",
+        "name": "Disquieting Sounds",
+        "language": "vi",
+        "context": "Tiếng khóc trẻ con, lẻ loi và lạc lõng. 1 tiếng thét. Tiếng thủy tinh vỡ. Yên tĩnh ",
+        "detail": "Đổ 6 cục xúc xắc\n>= số omen hiện có: Tăng 1 Sanity\n< số omen hiện có: Nhận 1 cục xúc xắc sát thương tinh thần"
+    },
+    {
+        "id": "45",
+        "category": "event",
+        "name": "Đánh DấU Phòng BằNg Thẻ Drip. MỗI Nhân VậT Trong Phòng Này Bị GiảM 1 CụC Xúc XắC Khi ThựC HiệN Các LầN Đổ Xúc XắC Chỉ Số",
+        "language": "vi",
+        "context": "1 âm thanh đều đặn châm chích vào bộ não ",
+        "detail": "Mỗi nhân vật trong phòng bị giảm 1 cục xúc xắc khi thực hiện các lần đổ xúc xắc chỉ số trong phòng này"
+    },
+    {
+        "id": "46",
+        "category": "event",
+        "name": "Footsteps",
+        "language": "vi",
+        "context": "Những tấm phản sàn nhà cọt kẹt kêu. Bụi bay. Dấu chân hiện lên lớp bụi bẩn trên sàn. Và rồi, họ tiến về phía bạn, rồi biến mất ",
+        "detail": "Đổ 1 cục xúc xắc hoặc 2 cục xúc xắc nếu đang ở Chapel\n4 Bạn và nhân vật gần bạn nhất tăng 1 Might\n3 Bạn tăng 1 Might và nhân vật gần bạn nhất mất 1 Sanity\n2 Mất 1 Sanity\n1 Mất 1 Speed\n0 Mỗi nhân vật mất 1 điểm chỉ số tự chọn"
+    },
+    {
+        "id": "47",
+        "category": "event",
+        "name": "Funeral",
+        "language": "vi",
+        "context": "Bạn nhìn vào 1 cái quan tài đang mở nắp. Bạn chính là người nằm ở trong ",
+        "detail": "Đổ Sanity xúc xắc\n4+ Tăng 1 Sanity\n2-3 Mất 1 Sanity\n0-1 Mất 1 Sanity, 1 Might và di chuyển đến Graveyard hoặc Crypt"
+    },
+    {
+        "id": "48",
+        "category": "event",
+        "name": "Grave Dirt",
+        "language": "vi",
+        "context": "Căn phòng này bao phủ bởi 1 lớp đất dày kịt, rơi lên da, len lỏi vào phổi làm bạn ho khan ",
+        "detail": "Đổ Might xúc xắc\n4+ Tăng 1 Might\n0-3 Chảy 1 máu mỗi lượt cho đến khi bạn được hồi phục chỉ số nhờ 1 item hoặc bạn đến Balcony, Gardens, Graveyard, Gymnasium, Larder, Patio hoặc Tower"
+    },
+    {
+        "id": "49",
+        "category": "event",
+        "name": "Groundskeeper",
+        "language": "vi",
+        "context": "Bạn quay lại và thấy 1 người đàn ông trong bộ đồ của người giữ cửa. Ông ta nhấc cái xẻng lên và vả vào mặt bạn. Chỉ cách mặt bạn vài phân, rồi ông ta biến mất, chỉ còn lại dấu chân ",
+        "detail": "Đổ Knowledge xúc xắc. Nhân vật ở Gardens bớt 2 cục xúc xắc cho lần đổ\n4+ Nhận 1 item\n0-3 Người bên phải tấn công bạn với Might 4, hãy tự vệ đợt tấn công này"
+    },
+    {
+        "id": "50",
+        "category": "event",
+        "name": "Hanged Men",
+        "language": "vi",
+        "context": "1 làn gió lạnh sống lưng thổi qua căn phòng. Trước mắt bạn, 3 người đàn ông treo mình trên những sợi dây thừng sờn cũ. Họ nhìn bạn chằm chằm bằng ánh mắt lạnh lẽo và chết chóc. Cả 3 đung đưa khe khẽ, rồi dần tan thành bụi rơi xuống sàn. Cổ họng bạn trở nên tắt nghẹn ",
+        "detail": "Đổ xúc xắc cho mỗi chỉ số\n2+ chỉ số không bị ảnh hưởng\n0-1 Mất 1 điểm chỉ số\nNếu 2+ cho tất cả lần đổ, tăng 1 điểm cho chỉ số tự chọn"
+    },
+    {
+        "id": "51",
+        "category": "event",
+        "name": "Hideous Shriek",
+        "language": "vi",
+        "context": "Ban đầu chỉ là tiếng thầm thì nhưng giờ đã thành 1 tiếng thét xé lòng ",
+        "detail": "Mỗi nhân vật đổ Sanity xúc xắc\n4+ Miễn nhiễm\n1-3 Nhận 1 cục xúc xắc sát thương tinh thần\n0 Nhận 2 cục xúc xắc sát thương tinh thần"
+    },
+    {
+        "id": "52",
+        "category": "event",
+        "name": "Image In The Mirror (Cause)",
+        "language": "vi",
+        "context": "Có 1 tấm gương cũ trong phòng. Hình ảnh trong gương từ từ tiến lại gần. Bạn nhận ra đó là phản chiếu của mình ở 1 thời điểm khác. Bạn cần phải giúp phản chiếu của mình, nên viết lên gương dòng chữ: \"Sẽ có ích\". Rồi bạn đưa 1 vật phẩm xuyên qua gương. ",
+        "detail": "Sự kiện này sẽ ảnh hưởng đến người bên trái gần nhất có item nếu bạn không giữ item nào. Lá bài này sẽ không khả dụng nếu không ai giữ item.\nChọn 1 item bỏ lại chồng bài và Tăng 1 Knowledge"
+    },
+    {
+        "id": "53",
+        "category": "event",
+        "name": "Image In The Mirror (Result)",
+        "language": "vi",
+        "context": "Có 1 tấm gương cũ trong phòng. Hình ảnh trong gương từ từ tiến lại gần. Bạn nhận ra đó là phản chiếu của mình ở 1 thời điểm khác. Nó viết lên gương dòng chữ: \"Sẽ có ích\". Rồi đưa cho bạn 1 vật phẩm từ trong gương. ",
+        "detail": "Nhận 1 item"
+    },
+    {
+        "id": "54",
+        "category": "event",
+        "name": "It Is Meant To Be",
+        "language": "vi",
+        "context": "Bạn ngã xuống sàn, những viễn cảnh của các sự kiện tương lai lướt qua tâm trí ",
+        "detail": "Chọn 1 trong 2 trường hợp\nNhìn và sắp xếp theo ý muốn 3 lá bài trên cùng của bất cứ chồng bài nào. Không được tiết lộ thông tin với ai\nCó thể đổ 4 cục xúc xắc và sử dụng kết quả đổ này cho bất cứ lượt đổ xúc xắc nào đó sau này"
+    },
+    {
+        "id": "55",
+        "category": "event",
+        "name": "Jonah'S Turn",
+        "language": "vi",
+        "context": "2 đứa nhóc đang chơi với 1 món đồ gỗ. \"Jonah, mày muốn chơi thử không?\", 1 đứa hỏi. \"Không\" Jonah trả lời. \"Tao muốn chơi luôn\". Jonah giựt lấy món đồ chơi và phang vào mặt đứa còn lại. Thằng bé ngã xuống nhưng Jonah vẫn đánh túi bụi không ngừng. ",
+        "detail": "Nếu có người chịu vứt Puzzle Box và lấy 1 item khác thì bạn được tăng 1 Sanity.\nNếu không, bạn nhận 1 cục xúc xắc tinh thần"
+    },
+    {
+        "id": "56",
+        "category": "event",
+        "name": "Lights Out",
+        "language": "vi",
+        "context": "Đèn pin của bạn vụt tắt. Đừng lo, vẫn còn người khác có pin thay thế. ",
+        "detail": "Bạn chỉ có thể di chuyển 1 ô mỗi lượt cho đến khi bạn gặp 1 nhân vật khác hoặc nếu bạn có Candle hoặc bạn đến được Furnace Room"
+    },
+    {
+        "id": "57",
+        "category": "event",
+        "name": "Locked Safe",
+        "language": "vi",
+        "context": "Đằng sau bức chân dung là 1 két sắt âm tường. Nó bị kẹt, dĩ nhiên rồi ",
+        "detail": "Nhân vật thử cạy Locked Safe bằng đổ Knowledge xúc xắc "
+    },
+    {
+        "id": "58",
+        "category": "event",
+        "name": "Mists From The Walls",
+        "language": "vi",
+        "context": "Hơi nước tràn ra khỏi các vách tường. Trong làn hơi hiện lên những gương mặt của người và cả của không phải người ",
+        "detail": "Mỗi người ở tầng Basement đổ Sanity xúc xắc\n4+ Mọi chuyện đều ổn\n1-3 Nhận 1 cục xúc xắc sát thương tinh thần\nNhận 2 cục nếu nhân vật ở phòng event\n0 Nhận 1 cục xúc xắc sát thương tinh thần\nNhận 3 cục nếu nhân vật ở phòng event"
+    },
+    {
+        "id": "59",
+        "category": "event",
+        "name": "Mystic Slide",
+        "language": "vi",
+        "context": "Sàn nhà đổ sập ",
+        "detail": "Nếu bạn đang ở tầng Basement, sự kiện này sẽ ảnh hưởng đến người bên trái gần nhất không ở tầng Basement. Sự kiện này không khả dụng nếu mọi nhân vật đều ở tầng Basement.\nMở ra Mystic Slide ở căn phòng khả dụng. Đổ Might xúc xắc để sử dụng Slide\n5+ Di chuyển đến bất cứ phòng nào ở bất cứ tầng lầu dưới\n0-4 Mở 1 lát phòng mới hoặc 1 phòng bất kỳ (nếu không còn phòng mới) ở tầng Basement và nhận 1 cục xúc xắc sát thương vật lý. Bạn không cần rút bài phòng mới nếu đây không phải lượt của bạn"
+    },
+    {
+        "id": "60",
+        "category": "event",
+        "name": "Night View",
+        "language": "vi",
+        "context": "Bạn nhìn thấy 1 ảo cảnh về 1 cặp đôi ma quái đang đi dạo quanh sân trong bộ đồ cưới. ",
+        "detail": "Đổ Knowledge xúc xắc\n5+ Tăng 1 Knowledge\n0-4 Không có gì xảy ra"
+    },
+    {
+        "id": "61",
+        "category": "event",
+        "name": "Phone Call",
+        "language": "vi",
+        "context": "Tiếng điện thoại vang lên trong phòng, thôi thúc bạn bắt máy. Đầu dây bên kia vang lên giọng nói ngọt xớt của 1 cụ bà ",
+        "detail": "Đổ 2 cục xúc xắc\n4 Tăng 1 Sanity\n3 Tăng 1 Knowledge\n1-2 Nhận 1 xúc xắc sát thương tinh thần\n0 Nhận 2 xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "62",
+        "category": "event",
+        "name": "Possession",
+        "language": "vi",
+        "context": "1 bóng đen tách khỏi vách tường. Trong khi bạn đang sững người, bóng đen đó bao lấy bạn, làm bạn lạnh đến tận xương tủy ",
+        "detail": "Chọn 1 chỉ số để đổ xúc xắc\n4+ Tăng 1 điểm sức mạnh chỉ số đó\n0-3 Chỉ số lựa chọn bị rớt xuống mức thấp nhất. Nếu chỉ số đó đã ở mức thấp nhất, hãy chọn 1 chỉ số khác"
+    },
+    {
+        "id": "63",
+        "category": "event",
+        "name": "Revolving Wall",
+        "language": "vi",
+        "context": "Bức tường chuyển động, mở ra 1 nơi khác. Đánh dấu tường bằng thẻ Wall Switch ",
+        "detail": "Mở 1 lối đi xuyên tường sang phòng bên cạnh. Nếu không có phòng thì rút thêm, không còn phòng thì thôi.\nĐể sử dụng Revolving Wall, đổ Knowledge xúc xắc 3+"
+    },
+    {
+        "id": "64",
+        "category": "event",
+        "name": "Rotten",
+        "language": "vi",
+        "context": "Mùi trong căn phòng này thật khủng khiếp. Mưa tanh gió máu. Mùi của sự tàn sát. ",
+        "detail": "Đổ Sanity xúc xắc\n5+ Tăng 1 Sanity\n2-4 Mất 1 Might\n1 Mất 1 Might, 1 Speed\n0 Mất 1 điểm mỗi chỉ số"
+    },
+    {
+        "id": "65",
+        "category": "event",
+        "name": "Smoke",
+        "language": "vi",
+        "context": "Khói ngập tràn. Bạn ho sặc sụa và nước mắt chảy ròng ",
+        "detail": "Phòng toàn khói làm giảm tầm nhìn. Nhân vật tại phòng này bị giảm 2 cục xúc xắc cho các lần đổ xúc xắc chỉ số"
+    },
+    {
+        "id": "66",
+        "category": "event",
+        "name": "Secret Stairs",
+        "language": "vi",
+        "context": "1 tiếng răng rắc rùng rợn vang lên. Bạn phát hiện 1 cầu thang bí mật. Đánh dấu phòng bằng thẻ Secret Stair ",
+        "detail": "Kết nối phòng bạn đang đứng với 1 phòng ở tầng khác đánh dấu bằng token\nNếu bạn dùng ngay Secret Stairs, rút thêm 1 event tại nơi đến"
+    },
+    {
+        "id": "67",
+        "category": "event",
+        "name": "Shrieking Wind",
+        "language": "vi",
+        "context": "1 làn gió rít qua khe cửa ",
+        "detail": "Mỗi nhân vật ở Gardens, Graveyard, Patio, Tower, Balcony hoặc phòng có cửa sổ, đổ Might xúc xắc\n5+ Yên vị\n3-4 Bị gió quật ngã. Nhận 1 cục xúc xắc sát thương vật lý\n1-2 Gió thổi xuyên tâm can. Nhận 1 cục sát thương tinh thần\n0 Bị gió quật sấp mặt. Nhận 1 cục xúc xắc sát thương vật lý và rớt 1 item ở Entrance Hall"
+    },
+    {
+        "id": "68",
+        "category": "event",
+        "name": "Silence",
+        "language": "vi",
+        "context": "Dưới lòng đất, mọi thứ đều im lặng. Ngay cả tiếng thở cũng không. ",
+        "detail": "Mỗi nhân vật đang ở tầng Basement đổ Sanity xúc xắc\n4+ Không có gì xảy ra\n1-3 Hét không thành tiếng và nhận 1 cục xúc xắc sát thương tinh thần\n0 La hét hoảng loạn và nhận 2 cục xúc xắc sát thương tinh thần"
+    },
+    {
+        "id": "69",
+        "category": "event",
+        "name": "Skeleton",
+        "language": "vi",
+        "context": "Mẹ và con, vẫn ôm lấy nhau. Đánh dấu phòng bằng thẻ Skeleton ",
+        "detail": "Nhận 1 cục xúc xắc sát thương tinh thần\nMỗi nhân vật có thể thử đổ Sanity xúc xắc khi vào phòng này\n5+ Nhận 1 item\n0-4 Nhận 1 cục xúc xắc sát thương tinh thần"
+    },
+    {
+        "id": "70",
+        "category": "event",
+        "name": "Secret Passage",
+        "language": "vi",
+        "context": "1 phần vách tường hé ra, để lộ 1 đường hầm ẩm mốc. Đánh dấu phòng bằng thẻ Secret Passage ",
+        "detail": "Đổ 3 cục xúc xắc để mở Secret Passage\n6 có thể chọn điểm đến của Secret Passage ở bất cứ phòng nào\n4-5 có thể chọn điểm đến của Secret Passage ở tầng Upper\n2-3 có thể chọn điểm đến của Secret Passage ở tầng Ground\n0-1 có thể chọn điểm đến của Secret Passage ở tầng Basement"
+    },
+    {
+        "id": "71",
+        "category": "event",
+        "name": "The Beckoning",
+        "language": "vi",
+        "context": "Bên ngoài. Bạn phải thoát ra bên ngoài. Bay đến tự do! ",
+        "detail": "Mỗi nhân vật đang đứng ở Gardens, Graveyard, Tower, Balcony hoặc phòng có cửa sổ phải đổ Sanity xúc xắc\n3+ Không bị gì\n0-2 Di chuyển tới Patio và nhận 1 cục xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "72",
+        "category": "event",
+        "name": "Something Slimy",
+        "language": "vi",
+        "context": "Cái gì đó đang quấn quanh cổ chân? Bọ chăng? Hay xúc tua? 1 bộ móng người chết? ",
+        "detail": "Đổ Speed xúc xắc\n4+ Tăng 1 Speed\n1-3 Mất 1 Might\n0 Mất 1 Might, 1Speed"
+    },
+    {
+        "id": "73",
+        "category": "event",
+        "name": "Spider",
+        "language": "vi",
+        "context": "1 con nhện to bằng nắm tay rơi lên vai bạn...bò vào tóc ",
+        "detail": "Đổ Sanity hoặc Speed xúc xắc\n4+ Tăng 1 điểm chỉ số được sử dụng để đổ\n1-3 Nhận 1 cục xúc xắc sát thương vật lý\n0 Nhận 2 cục xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "74",
+        "category": "event",
+        "name": "Webs",
+        "language": "vi",
+        "context": "Thản nhiên, bạn với tay gạt đống mạng nhện sang 1 bên...nhưng chúng không suy suyển. Mà dính chùm lại với nhau ",
+        "detail": "Đổ Might xúc xắc\n4+ Tăng 1 điểm Might\n0-3 Bạn bị kẹt tối đa 3 lượt. Bạn hoặc đồng đội có thể đổ Might 4+ để giải thoát cho bạn. Chú ý, họ cũng sẽ bị kẹt 1 lượt nếu giải cứu thất bại"
+    },
+    {
+        "id": "75",
+        "category": "event",
+        "name": "The Lost One",
+        "language": "vi",
+        "context": "1 người phụ nữ mặc bộ đồ thời Nội Chiến ra dấu với bạn. Làm bạn mất hồn ",
+        "detail": "Đổ Knowledge xúc xắc\n5+ tăng 1 Knowledge\n0-4 đổ 3 cục xúc xắc\n{\n6 bạn di chuyển tới Entrance Hall\n4-5 bạn di chuyển tới Upper Landing\n2-3 bạn di chuyển tới 1 lát phòng mới ở tầng Upper\n0-1 bạn di chuyển tới 1 lát phòng mới ở tầng Basement\nNếu không còn phòng bạn di chuyển tới Entrance Hall\n}"
+    },
+    {
+        "id": "76",
+        "category": "event",
+        "name": "The Voice",
+        "language": "vi",
+        "context": "\"Tôi ở dưới sàn nhà, chôn dưới sàn nhà nè...\" Giọng nói thì thầm vang lên, rồi biến mất ",
+        "detail": "Đổ Knowledge xúc xắc\n4+ nhận được 1 item"
+    },
+    {
+        "id": "77",
+        "category": "event",
+        "name": "The Walls",
+        "language": "vi",
+        "context": "Căn phòng này thật ấm áp. Những bức tường như làm từ thịt sống với nhịp tim đập thình thịch. Nhịp tim của bạn hòa vào nhịp đập căn nhà. Bạn bị hút vào những bức tường...và xuất hiện ở nơi khác ",
+        "detail": "Bạn bị di chuyển vào 1 lát phòng mới"
+    },
+    {
+        "id": "78",
+        "category": "event",
+        "name": "Something Hidden",
+        "language": "vi",
+        "context": "Có gì đó ở phòng này rất lạ, nhưng là gì? Bạn cứ mãi thắc mắc về vấn đề này ",
+        "detail": "Cơ hội đổ Knowledge xúc xắc\n4+ Nhận 1 item\n0-3 Mất 1 Sanity"
+    },
+    {
+        "id": "79",
+        "category": "event",
+        "name": "What The...?",
+        "language": "vi",
+        "context": "Khi bạn ngoảnh đầu nhìn lại đoạn đường mình đã đi, bạn chẳng nhin thấy gì cả. Chỉ có làn sương trống rỗng tại nơi từng tồn tại căn phòng ",
+        "detail": "Dời lát phòng đang đứng sang vị trí khác cùng tầng. Nếu không còn chỗ thì di chuyển sang tầng khác"
+    },
+    {
+        "id": "80",
+        "category": "event",
+        "name": "Whoops!",
+        "language": "vi",
+        "context": "Hình như bạn đạp phải 1 cái xác. Trước khi kịp tránh, bạn bị đánh bất tỉnh. ",
+        "detail": "Người bên phải chọn bỏ đi ngẫu nhiên 1 lá item của bạn"
+    },
+    {
+        "id": "81",
+        "category": "room",
+        "name": "Furnace Room",
+        "language": "vi",
+        "context": " ",
+        "detail": "Bạn nhận 1 điểm sát thương vật lý nếu kết thúc lượt ở đây"
+    },
+    {
+        "id": "82",
+        "category": "room",
+        "name": "Crypt",
+        "language": "vi",
+        "context": " ",
+        "detail": "Bạn nhận 1 điểm sát thương tinh thần nếu kết thúc lượt ở đây"
+    },
+    {
+        "id": "83",
+        "category": "room",
+        "name": "Coal Chute",
+        "language": "vi",
+        "context": " ",
+        "detail": "Cầu trượt 1 chiều tới Basement Landing"
+    },
+    {
+        "id": "84",
+        "category": "room",
+        "name": "Stairs From Basement",
+        "language": "vi",
+        "context": " ",
+        "detail": "Dẫn tới Entrance Hall và ngược lại"
+    },
+    {
+        "id": "85",
+        "category": "room",
+        "name": "Gallery",
+        "language": "vi",
+        "context": " ",
+        "detail": "Bạn có thể dùng 1 cục xúc xắc sát thương vật lý để di chuyển đến Ballroom"
+    },
+    {
+        "id": "86",
+        "category": "room",
+        "name": "Mystic Elevator",
+        "language": "vi",
+        "context": " ",
+        "detail": "Đổ 2 cục xúc xắc và di chuyển lát phòng này tới bất kỳ cánh cửa còn trống tại\n4 Tầng bất kỳ\n3 Tầng Upper\n2 Tầng Ground\n1 Tầng Basement\n0 Tầng Basement và mọi nhân vật ở đây nhận 1 cục xúc xắc sát thương vật lý\n1 lần/lượt"
+    },
+    {
+        "id": "87",
+        "category": "room",
+        "name": "Larder",
+        "language": "vi",
+        "context": " ",
+        "detail": "Nếu kết thúc lượt ở đây, nhận 1 Might\n1 lần/game"
+    },
+    {
+        "id": "88",
+        "category": "room",
+        "name": "Gymnasium",
+        "language": "vi",
+        "context": " ",
+        "detail": "Nếu kết thúc lượt ở đây, nhận 1 Speed\n1 lần/game"
+    },
+    {
+        "id": "89",
+        "category": "room",
+        "name": "Chapel",
+        "language": "vi",
+        "context": " ",
+        "detail": "Nếu kết thúc lượt ở đây, nhận 1 Sanity\n1 lần/game"
+    },
+    {
+        "id": "90",
+        "category": "room",
+        "name": "Library",
+        "language": "vi",
+        "context": " ",
+        "detail": "Nếu kết thúc lượt ở đây, nhận 1 Knowledge\n1 lần/game"
+    },
+    {
+        "id": "91",
+        "category": "room",
+        "name": "Vault",
+        "language": "vi",
+        "context": " ",
+        "detail": "Có thể nhận 2 item nếu đổ Knowledge xúc xắc 6+"
+    },
+    {
+        "id": "92",
+        "category": "room",
+        "name": "Collapsed Room",
+        "language": "vi",
+        "context": " ",
+        "detail": "Người đầu tiên vào phòng đổ Speed xúc xắc\n5+ Không có chuyện gì xảy ra\n0-4 Mở 1 lát phòng mới ở tầng Basement hoặc 1 phòng tự chọn nếu không còn phòng mới và nhận 1 cục xúc xắc sát thương vật lý. Sau đó lối này có thể được dùng để xuống tầng Basement bằng 1 cục xúc xắc sát thương vật lý"
+    },
+    {
+        "id": "93",
+        "category": "room",
+        "name": "Catacombs",
+        "language": "vi",
+        "context": " ",
+        "detail": "Đổ Sanity xúc xắc 6+ để băng qua. Dừng lại nếu thất bại"
+    },
+    {
+        "id": "94",
+        "category": "room",
+        "name": "Chasm",
+        "language": "vi",
+        "context": " ",
+        "detail": "Đổ Speed xúc xắc 6+ để băng qua. Dừng lại nếu thất bại"
+    },
+    {
+        "id": "95",
+        "category": "room",
+        "name": "Tower",
+        "language": "vi",
+        "context": " ",
+        "detail": "Đổ Might xúc xắc 3+ để băng qua. Dừng lại nếu thất bại"
+    },
+    {
+        "id": "96",
+        "category": "room",
+        "name": "Pentagram Chamber",
+        "language": "vi",
+        "context": " ",
+        "detail": "Phải đổ Knowledge xúc xắc 4+ khi rời khỏi phòng\nThất bại mất 1 Sanity"
+    },
+    {
+        "id": "97",
+        "category": "room",
+        "name": "Attic",
+        "language": "vi",
+        "context": " ",
+        "detail": "Phải đổ Speed xúc xắc 3+ khi rời khỏi phòng\nThất bại mất 1 Might"
+    },
+    {
+        "id": "98",
+        "category": "room",
+        "name": "Graveyard",
+        "language": "vi",
+        "context": " ",
+        "detail": "Phải đổ Sanity xúc xắc 4+ khi rời khỏi phòng\nThất bại mất 1 Knowledge"
+    },
+    {
+        "id": "99",
+        "category": "room",
+        "name": "Junk Room",
+        "language": "vi",
+        "context": null,
+        "detail": "Phải đổ Might xúc xắc 3+ khi rời khỏi phòng\nThất bại sẽ mất 1 Speed"
+    }
+]
