@@ -95,7 +95,7 @@ search_input.addEventListener("input",(e)=>{
     search_box.classList.toggle("hide",!value)
     search_result_list.forEach(result=>{
         // const isVisible = result.name.includes(value)
-        const isVisible = result.name.startsWith(value)
+        const isVisible = result.name.toLowerCase().startsWith(value)
         result.element.classList.toggle("hide",!isVisible)
     })
 })
