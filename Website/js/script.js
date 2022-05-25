@@ -18,6 +18,7 @@ const linkListTemplate = document.querySelector("[data-card-list-template]")
 const contentListTemplate = document.querySelector('[content-list-template]')
 const contentListContainer = document.querySelector('[content-list-container]')
 
+const ANIM_DURATION = 300
 let current_btn;
 let card_data = [];
 let search_result_list = []
@@ -92,14 +93,15 @@ clear_icon.addEventListener('click',()=>{
 })
 search_input.addEventListener("input",(e)=>{
     const value = e.target.value.toLowerCase().trim()
-    search_box.classList.toggle("hide",!value)
+    search_box.classList.remove("hide")
     search_result_list.forEach(result=>{
         // const isVisible = result.name.includes(value)
         const isVisible = result.name.toLowerCase().startsWith(value)
         result.element.classList.toggle("hide",!isVisible)
     })
 })
-console.log(card_data)
+let cardMenu_isOpen = false;
+let content_isOpen = false;
 menu_button.forEach(item => item.addEventListener('click',activeLink));
 function activeLink(){
     let id = this.id;
@@ -116,9 +118,7 @@ function activeLink(){
     
     if (current_btn) {
         if (current_btn==id) {
-            card_menu_Promise().then((message)=>{
-                card_menu.classList.toggle('close');
-            }).catch((message)=>{card_menu.classList.add('open');});
+            card_menu_anim(false)
             menu_button.forEach((item)=>{
                 if (item.id != id) {
                     item.classList.toggle('scale-reset-anim');
@@ -130,16 +130,14 @@ function activeLink(){
             })
             search_bar.classList.remove('active');
             title.classList.toggle('close');
-            content_area.classList.toggle('focus');
+            
             current_btn=null;
         }else {
-            card_menu_Promise().then((message)=>{
-                card_menu.classList.toggle('close');
-                setTimeout(()=>{
-                    card_menu.classList.toggle('open');
-                    card_menu_list_generate(this.value);
-                },200)
-            }).catch((message)=>{card_menu.classList.add('open');});
+            setTimeout(() => {
+                card_menu_list_generate(this.value);
+            }, ANIM_DURATION);
+
+            card_menu_anim(true)
             menu_button.forEach((item)=>{
                 if (item.id == id) {
                    item.classList.remove('scale-down-anim');
@@ -155,10 +153,8 @@ function activeLink(){
             current_btn = id;
         }
     } else {
-        card_menu_Promise().catch((message)=>{
-            card_menu.classList.add('open');
-            card_menu_list_generate(this.value);
-        });
+        content_isOpen ? card_menu_anim(true) : card_menu_anim(false)
+        card_menu_list_generate(this.value)
         menu_button.forEach((item)=>{
             if (item.id != id) {
                 item.classList.add('scale-down-anim') ;
@@ -168,29 +164,83 @@ function activeLink(){
                 item.classList.toggle('active');
             }
         })
-        title.classList.toggle('close');
-        content_area.classList.toggle('focus');
+        title.classList.add('close');
         current_btn = id;
     }
     
 
 }
-function card_menu_Promise(){
-    return new Promise ((resolve,reject)=> {
-        if (card_menu.classList.contains('open')){
-            card_menu.classList.toggle('open');
-            setTimeout(()=>{
-                card_menu.classList.toggle('close');
-            },200)
-            resolve("success")
-        }else{
-            reject("fail")
+function card_menu_Promise (){
+    const myCardPromise = new Promise((resolve, reject) => {
+            card_menu.classList.add('close');
+            card_menu.classList.remove('open');
+            resolve('success');
+      });
+    return myCardPromise
+}
+function content_Promise (){
+    const myContentPromise = new Promise((resolve, reject) => {
+            contentListContainer.classList.add('inactive');
+            contentListContainer.classList.remove('active');
+            resolve('success');
+      });
+    return myContentPromise
+}
+function card_menu_anim(repeat){
+    if (repeat) {
+        if (cardMenu_isOpen){
+            card_menu_Promise().then((message)=>{
+                setTimeout(() => {
+                    card_menu.classList.add('open');
+                    card_menu.classList.remove('close');
+                }, ANIM_DURATION);
+            })
+        } else {
+            card_menu.classList.add('open');
+            card_menu.classList.remove('close');
+            cardMenu_isOpen = true;
         }
-        
-    })
+        if (content_isOpen){
+            content_Promise().then((message)=>{
+                setTimeout(() => {
+                    contentListContainer.classList.add('active');
+                    contentListContainer.classList.remove('inactive');
+                }, ANIM_DURATION);
+            })
+        } else {
+            contentListContainer.classList.add('active');
+            contentListContainer.classList.remove('inactive');  
+            content_isOpen = true;
+        }
+    }else{
+
+        if (cardMenu_isOpen){
+            card_menu.classList.add('close');
+            card_menu.classList.remove('open');
+            cardMenu_isOpen = false;
+        } else {
+            card_menu.classList.add('open');
+            card_menu.classList.remove('close');
+            cardMenu_isOpen = true;
+        }
+        if (content_isOpen){
+            contentListContainer.classList.add('inactive');
+            contentListContainer.classList.remove('active'); 
+            content_area.classList.remove('focus');
+            content_isOpen = false;
+        } else {
+            contentListContainer.classList.add('active');
+            contentListContainer.classList.remove('inactive'); 
+            content_area.classList.add('focus'); 
+            content_isOpen = true;
+        }
+    }
+    console.log('cardMenu_isOpen '+cardMenu_isOpen)
+    console.log('content_isOpen '+content_isOpen)
 }
 function card_menu_list_generate(val){
     linkListContainer.innerHTML=''
+    contentListContainer.innerHTML=''
     card_data.forEach(result => {
         if (result.category == val) {
             //load link_list
@@ -198,7 +248,7 @@ function card_menu_list_generate(val){
             const link = linkList.querySelector('[data-header]')
             link.textContent = result.name.toUpperCase()
             linkList.addEventListener('click',()=>{
-                document.getElementById(result.name.toLowerCase()).scrollIntoView()
+                document.getElementById(result.name.toLowerCase()).scrollIntoView({behavior: 'smooth' })
             })
             linkListContainer.append(linkList)
             //load content
@@ -232,6 +282,49 @@ function search_list_generate (data) {
     const name = searchResult.querySelector("[name]")
     name.textContent = data.name.toUpperCase()
     //set anchor link ...
+    searchResult.addEventListener('click',()=>{
+        title.classList.add('close');
+        
+        card_menu.classList.remove('close');
+        card_menu.classList.remove('open');
+
+        content_area.classList.add('focus');
+        contentListContainer.innerHTML=''
+        const result = card_data.filter((res)=>{
+            return res.name.toUpperCase()==data.name.toUpperCase()
+        })[0]
+        menu_button.forEach((item)=>{
+            item.classList.remove('scale-reset-anim');
+            item.classList.toggle('scale-down-anim',item.value != result.category);
+            item.classList.toggle('inactive',item.value != result.category);
+            item.classList.toggle('active',item.value == result.category);
+            let current_texttile = item.parentNode.querySelector('.texttile');
+            if (current_texttile) {
+                current_texttile.classList.toggle('active',item.value == result.category);
+                current_texttile.classList.toggle('inactive',item.value != result.category);
+            }
+            if(item.value == result.category) current_btn = item.id
+        })
+        const contentList = contentListTemplate.content.cloneNode(true).children[0]
+        const content_title = contentList.querySelector('.content-title')
+        const content_description = contentList.querySelector('.content-description')
+        const content_detail = contentList.querySelector('.content-detail')
+        content_title.textContent = result.name
+        content_title.id = result.name.toLowerCase()
+        content_description.textContent = result.context
+        content_detail.textContent = result.detail
+        contentListContainer.append(contentList)
+        content_isOpen=true;
+        // cardMenu_isOpen = true;
+        contentListContainer.classList.toggle('inactive',!content_isOpen)
+        contentListContainer.classList.toggle('active',content_isOpen)
+    })
+
     search_box.append(searchResult)
     return searchResult;
+}
+document.onclick = function (e){
+    if(e.target.id !="search-box"){
+        search_box.classList.add("hide");
+    }
 }

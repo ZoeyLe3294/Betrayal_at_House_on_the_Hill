@@ -13,6 +13,7 @@ html {
 }
 ::-webkit-scrollbar {
     width: 0.4vw;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 100vw;
@@ -174,34 +175,38 @@ header .logo
     width: 90%;
     max-height: 30vh;
     top: 2em;
-    background: rgba(184, 184, 184, 0.2);
+    background: #022a43;
     overflow: auto;
 }
 
-.search-box a {
+.search-link {
     text-decoration: none;
     color: #fff;
     width: 100%;
     display: flex;
     align-items: center;
     transition: .3s linear;
+    cursor: pointer;
 }
-.search-box a img{
-    /* width: 4em; */
+.search-link:hover {
+    background: #92ffe442;
+}
+.search-link img{
+    width: 4em;
     height: 2.5em;
-    border-radius: 5px;
+    border-radius: 0.5em;
     box-shadow: 0 0.2em 0.2em rgb(0 0 0);
     margin: 0.5em 2em;
     background: #92ffe491;
     padding: 0.5em 0.5em;
 }
-.search-box a .search-content{
+.search-link .search-content{
     color: white;
 }
-.search-box a .search-content h5{
+.search-link .search-content h5{
     font-size: 13px;
 }
-.search-box a .search-content p{
+.search-link .search-content p{
     color: rgb(255, 255, 255,0.7);
     font-size: 11px;
     font-weight: 500;
@@ -488,6 +493,13 @@ footer ul {
 .content-list {
     list-style: none;
     width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+.content-list.active{
+    opacity: 1;
+}
+.content-list.inactive{
+    opacity: 0;
 }
 .content {
     margin-bottom: 0.5em;
@@ -536,6 +548,15 @@ font-size: 0.7em;}
     0% {opacity: 0;visibility: hidden;}
     90% {opacity: 0;}
     100% {opacity: 1;visibility: visible;}
+}
+.fade-out-anim {
+    animation: fadeOut 2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;visibility: visible;}
+    90% {opacity: 0;}
+    100% {opacity: 0;visibility: hidden;}
 }
 .scale-down-anim {
     animation: scale-down var(--anim_duration) ease-in-out forwards;
