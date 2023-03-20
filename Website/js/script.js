@@ -269,13 +269,13 @@ function search_list_generate (data) {
     //set img
     const img = searchResult.querySelector("img")
     switch (data.category){
-        case 'item': img.src = "/wiki_webpage/Website/assets/img/icon_item.svg"
+        case 'item': img.src = "/Website/assets/img/icon_item.svg"
         break;
-        case 'omen': img.src = "/wiki_webpage/Website/assets/img/icon_omen.svg"
+        case 'omen': img.src = "/Website/assets/img/icon_omen.svg"
         break;
-        case 'event': img.src = "/wiki_webpage/Website/assets/img/icon_event.svg"
+        case 'event': img.src = "/Website/assets/img/icon_event.svg"
         break;
-        case 'room': img.src = "/wiki_webpage/Website/assets/img/icon_room.svg"
+        case 'room': img.src = "/Website/assets/img/icon_room.svg"
         break;
     }
     //set name
@@ -328,3 +328,30 @@ document.onclick = function (e){
         search_box.classList.add("hide");
     }
 }
+
+// const btn = document
+//     .querySelector('.read-more-btn');
+
+// const text = document
+//     .querySelector('.card__read-more');
+
+// const cardHolder = document
+//     .querySelector('.card-holder');
+
+// cardHolder
+//     .addEventListener('click', e => {
+
+//         const current = e.target;
+
+//         const isReadMoreBtn = current.className.includes('read-more-btn');
+
+//         if (!isReadMoreBtn)
+//             return;
+
+//         const currentText = e.target.parentNode.querySelector('.card__read-more');
+
+//         currentText.classList.toggle('card__read-more--open');
+
+//         // current.textContent = current.textContent.includes('Read More...') ? 'Read Less...' : 'Read More...';
+
+//     });

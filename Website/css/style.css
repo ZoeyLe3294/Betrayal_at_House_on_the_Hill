@@ -1,5 +1,5 @@
-@font-face { font-family: UVNHoaKy; src: url('/wiki_webpage/Website/assets/font/UVNHOAKY.TTF'); }
-@font-face { font-family: SquarePeg; src: url('/wiki_webpage/Website/assets/font/SquarePeg-Regular.ttf'); } 
+@font-face { font-family: UVNHoaKy; src: url('/Website/assets/font/UVNHOAKY.TTF'); }
+@font-face { font-family: SquarePeg; src: url('/Website/assets/font/SquarePeg-Regular.ttf'); } 
 *
 {
   margin: 0;
@@ -31,7 +31,7 @@ html {
     --red: rgb(255, 0, 0);
     --small: 60%;
     --reg: 1;
-    --out: -150%;
+    --out: -250%;
     --in: 0%;
     --header_height:5vh;
     --footer_height:11vh;
@@ -107,13 +107,67 @@ html {
 .color-green {
     color: #00FF1A;
 }
+.color-red {
+    color: var(--red);
+}
 .text-underline {
     text-decoration: underline;
 }
-.box {
+body {
+    display: flex;
+    flex-flow: row;
+}
+.nav-open .nav {
+    width: 20vw;
+    /* transition-delay: 0.1s; */
+  }
+  
+  .nav-open .main,
+  .nav-open #background {
+    width: 80vw;
+  }
+
+  .nav {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.5s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1500;
+  }
+  
+  .nav-links-container {
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15);
+    padding-top: 7vw;
+  }
+  
+  .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #dddddd;
+  }
+  
+  .nav__text {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  
+  .nav__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+.main {
     display: flex;
     height: 100vh;
+    width: 100vw;
     flex-flow: column;
+    transition: width 0.5s;
+    position: relative;
 }
 header
 {
@@ -122,7 +176,7 @@ header
   width: 100%;
   height: var(--header_height);
   padding: 2em 2em;
-  z-index: 1000;
+  z-index: 2;
   visibility: hidden;
 }
 header .logo
@@ -219,15 +273,11 @@ header .logo
     display: none;
 }
 .bg-image {
-    background-image: url("/wiki_webpage/Website/assets/img/bg_Image1.png");
-  
-    filter: blur(2em);
-    -webkit-filter: blur(2em);
-  
-    /* Full height */
+    background-image: url("/Website/assets/img/bg_Image1.png");
+    filter: blur(.5em);
+    -webkit-filter: blur(.5em);
     height: 100%;
     width: 100%;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -239,6 +289,7 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 0;
+  padding: 5em;
 }
 #title.close{
     visibility: hidden;
@@ -264,7 +315,7 @@ header .logo
 }
 .text
 {
-  z-index: 2;
+  z-index: 0;
   top: 0;
   left: 0;  
 }
@@ -272,6 +323,9 @@ header .logo
     top: 0;
     left: 0;
     width: 100%;
+}
+h2 {
+    font-family: 'UVNHoaKy',sans-serif;
 }
 .text h2
 {
@@ -306,14 +360,15 @@ header .logo
 }
 footer
 {
-  z-index: 1000;
+  z-index: 2;
   visibility: hidden;
+  margin-top: 3em;
 }
 footer ul {
     height: var(--footer_height);
     width: 100%;
     bottom: 0;
-    padding-right: 10em;
+    /* padding-right: 10em; */
 }
 /* .menu
 {
@@ -380,10 +435,8 @@ footer ul {
 .menu .texttile {
     padding: 0.5em;
     font-size: 2em;
-    text-transform: uppercase;
     text-decoration: none;
     font-weight: 1000;
-    color: var(--white);
     letter-spacing: 2px;
     opacity: 0;
     transition: all var(--anim_duration) ease-in-out;
@@ -406,7 +459,7 @@ footer ul {
     transform: translateY(3em);
 }
 #scan_btn {
-    background: url(/wiki_webpage/Website/assets/img/qr\ icon.png);
+    background: url(/Website/assets/img/qr\ icon.png);
     background-size:cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -416,15 +469,14 @@ footer ul {
 .sub-container {
     right: 0;
     width: 100%;
-    height:var(--main_height);
-    top: var(--header_height);
-    z-index: 5;
+    z-index: 1;
     background: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: all var(--anim_duration) ease-in-out;
-    padding: 1em 10em;
+    padding: 1em 2em;
+    overflow: auto;
 }
 
 .card-menu {
@@ -452,12 +504,7 @@ footer ul {
     overflow-x: auto;
     text-align: start;
 }
-.card {
-    width: 100%;
-    cursor: pointer;
-    /* border-bottom: 5px double #111; */
-    margin: 2em 0;
-}
+
 .card-list-details {
     color: rgb(0, 0, 0);
     text-transform: capitalize;
@@ -466,16 +513,14 @@ footer ul {
 .card-list-arrow {
     width: 2em;
     height: 2em;
-    background: url(/wiki_webpage/Website/assets/img/Component\ 2\ –\ 34.svg);
+    background: url(/Website/assets/img/Component\ 2\ –\ 34.svg);
     background-repeat: no-repeat;
     background-size: 2em;
     background-position: center;
 }
 .content-area {
     flex: 5;
-    height: 85%;
-    padding: 2em;
-    margin: 2em;
+    margin-left: 2em;
     text-align: left;
     color: aliceblue;
     font-size: 2em;
@@ -485,10 +530,10 @@ footer ul {
     border-radius: 0.3em;
     overflow: auto;
 }
-.content-area.focus {
-    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.8);
+.focus {
+    box-shadow: 0.5em 0.25em 0.3em 0px rgb(0 0 0 / 80%);
     opacity: 1;
-    backdrop-filter: blur(2em);
+    backdrop-filter: blur(.5em);
 }
 .content-list {
     list-style: none;
@@ -550,7 +595,7 @@ font-size: 0.7em;}
     100% {opacity: 1;visibility: visible;}
 }
 .fade-out-anim {
-    animation: fadeOut 2s ease-out forwards;
+    animation: fadeOut 0.5s ease-out forwards;
 }
 
 @keyframes fadeOut {
@@ -596,3 +641,145 @@ font-size: 0.7em;}
     /* font-size: 2em; */
   }
 }
+
+
+.card-holder{
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    width: 20rem;
+    background-color: var(--accent);
+    color: #fff;
+  }
+  
+  .card__name{
+    font-size: 1.7em;
+  }
+  
+  .card__img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  
+  .card-contents{
+  }
+  
+  h1{
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  p{
+    font-size: 0.8em;
+  }
+  
+  .card__read-more{
+    /* display: block;
+    opacity: 0;
+    height: 0;
+    transition: all 0.5s; */
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+  
+  .card__read-more--open{
+    /* display: block;
+    opacity: 1;
+    height: 5rem; */
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more-btn{
+    display: inline-block;
+    color: var(--accent);
+    background-color: #eee;
+    padding: 0.6rem 1.5rem;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .read-more-btn:hover{
+    background-color: #fff;
+    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+  }
+
+  .expandMoreContent {
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+  }
+  .menu-burger{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2000;
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    height: 5vw;
+    width: 5vw;
+    text-align: center;
+    line-height: 10vw;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    /*color: #fff;*/
+    /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-btn span,
+  .menu-btn:before,
+  .menu-btn:after{
+      content: "";
+      position: absolute;
+      top: calc(50% - .2em);
+      left: 30%;
+      width: 40%;
+      border-bottom: .2em solid rgb(255, 255, 255);
+      transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .menu-btn:before{
+    transform: translateY(-8px);
+  }
+  .menu-btn:after{
+    transform: translateY(8px);
+  }
+
+  input .close {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      transition: background .6s;
+  }
+  
+  /* closing animation */
+  #active:checked + .menu-btn span {
+      transform: scaleX(0);
+  }
+  #active:checked + .menu-btn:before {
+      transform: rotate(45deg);
+    border-color: #fff;
+  }
+  #active:checked + .menu-btn:after {
+      transform: rotate(-45deg);
+    border-color: #fff;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
