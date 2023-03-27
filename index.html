@@ -12,34 +12,14 @@
 <body>
     <div class="bg-image pos-abs"></div>
     <div class="overlay pos-abs"></div>
-    <nav class="nav focus">
-        <div class="nav-links-container fade-out-anim">
-          <a href="#" class="nav__link">
-            <span class="nav__text">Rules</span>
-            <ion-icon name="cube-outline" size="large"></ion-icon>
-          </a>
-          <a href="#" class="nav__link">
-            <span class="nav__text">Cards</span>
-            <ion-icon name="location-outline" size="large"></ion-icon>
-          </a>
-          <a href="#" class="nav__link">
-            <span class="nav__text">QR Codes</span>
-            <ion-icon name="settings-outline" size="large"></ion-icon>
-          </a>
-          <a href="#" class="nav__link">
-            <span class="nav__text">Reference</span>
-            <ion-icon name="call-outline" size="large"></ion-icon>
-          </a>
-        </div>
-      </nav>
-      <div class="menu-burger">
+
+      <!-- <div class="menu-burger">
         <input type="checkbox" id="active" onclick="toggleNav()">
         <label for="active" class="menu-btn"><span></span></label>
         <label for="active" class="close"></label>
-      </div>
+      </div> -->
         <div class="main">
             <header class="d-flex jc-space-between ai-center">
-
                 <!-- <h2 class="logo">Betrayal at House on the Hill</h2> -->
                 <div class="search d-flex jc-right ai-center">
                     <div class="search-bar d-flex pos-rel jc-space-between ai-center">
@@ -53,7 +33,6 @@
                                     <h2 name></h2>
                                 </div>
                             </div>
-                            
                         </template>
                     </div>
                     <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
@@ -66,40 +45,14 @@
                 </div>
             </header>
         
-            <section class="sub-container d-flex jc-space-around">
-        
-                <!-- <div class="card-holder">
+            <section class="sub-container d-flex jc-space-between">
+                <div class="card-menu focus" card-list-container></div>
+                <template data-card-list-template>
                     <div class="card">
-                        <div class="card-contents">
-                            <p class="read-more-btn">The Blood Coders</p>
-                              <p class="card__read-more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quidem delectus
-                                expedita recusandae mollitia vero maiores voluptatum dolores.</p>
-        
-                        </div>
+                        <h2 class="card-list-details" data-header></h2>
                     </div>
-                    <div class="card">
-                        <div class="card-contents">
-                            <p class="read-more-btn">The Blood Coders</p>
-                              <p class="card__read-more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quidem delectus
-                                expedita recusandae mollitia vero maiores voluptatum dolores.</p>
-        
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <span style="flex:1"></span> -->
-                <div class="card-menu pos-rel">
-                    <span class="card-bg pos-rel d-flex jc-center ai-center">
-                        <img src="/Website/assets/img/card_omen_blank.svg" alt="Rule Section">
-                        <ul class="card-list pos-abs" card-list-container></ul>
-                        <template data-card-list-template>
-                            <li class="card pos-rel d-flex jc-space-between ai-center">
-                                <h2 class="card-list-details" data-header></h2>
-                            </li>
-                        </template>  
-                    </span>
-                </div>
-                
-                <div class="content-area pos-rel jc-left">
+                </template>            
+                <div class="content-area d-flex pos-rel jc-center fade-in-anim">
                         <ul class="content-list" content-list-container></ul>
                         <template content-list-template>
                             <li class="content" >
@@ -116,18 +69,19 @@
         
             </section>
         
-            <footer class="">
-                <ul class="menu d-flex jc-center">
+            <footer class="d-flex jc-space-between">
+                <p class="copyright">© GROUP TITLE 2015</p>
+                <ul class="menu d-flex">
                     <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Luật Chơi</span>
+                        <span class="texttile">Luật Chơi</span>
                         <button id="rule_btn" value="rule">
                             <span class="icon pos-rel d-flex jc-center">
-                                <img src="/Website/assets/img/icon_book.svg">
+                                <img src="/Website/assets/img/BetrayalHouseHill_v4.svg">
                             </span>
                         </button>
                     </li>
                     <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Sự Kiện</span>
+                        <span class="texttile">Sự Kiện</span>
                         <button id="event_btn" value="event">
                             <span class="icon pos-rel d-flex jc-center">
                                 <img src="/Website/assets/img/icon_event.svg">
@@ -135,7 +89,7 @@
                         </button>
                     </li>
                     <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Vật Phẩm</span>
+                        <span class="texttile">Vật Phẩm</span>
                         <button id="item_btn" value="item">
                             <span class="icon pos-rel d-flex jc-center">
                                 <img src="/Website/assets/img/icon_item.svg">
@@ -143,7 +97,7 @@
                         </button>
                     </li>
                     <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Điềm Báo</span>
+                        <span class="texttile">Điềm Báo</span>
                         <button id="omen_btn" value="omen">
                             <span class="icon pos-rel d-flex jc-center">
                                 <img src="/Website/assets/img/icon_omen.svg">
@@ -151,24 +105,15 @@
                         </button>
                     </li>
                     <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Lát Phòng</span>
+                        <span class="texttile">Lát Phòng</span>
                         <button id="room_btn" value="room">
                             <span class="icon pos-rel d-flex jc-center">
                                 <img src="/Website/assets/img/icon_room.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile pos-abs">Tham Khảo</span>
-                        <button id="ref_btn" value="ref">
-                            <span class="icon pos-rel d-flex jc-center">
-                                <img src="/Website/assets/img/BetrayalHouseHill_v4.svg">
-                            </span>
-                        </button>
-                    </li>
-                    <li class="ist d-flex fd-column jc-center ai-center">
-                        <button id="scan_btn" value="scan">
-                        </button>
+                    <li class="list qr-button d-flex fd-column jc-center ai-center">
+                        <button id="scan_btn" value="scan"></button>
                     </li>
                 </ul>
             </footer>
@@ -192,9 +137,3 @@
 
 </html>
 <script src="/Website/js/script.js"></script>
-<script>
-    function toggleNav() {
-      document.body.classList.toggle("nav-open");
-      document.querySelector(".nav-links-container").classList.toggle("fade-out-anim");
-    }
-  </script>

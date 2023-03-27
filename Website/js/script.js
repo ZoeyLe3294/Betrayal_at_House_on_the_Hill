@@ -4,7 +4,7 @@ const sub_container = document.querySelector('.sub-container');
 const card_menu = document.querySelector('.card-menu');
 const texttiles = document.querySelectorAll('.texttile');
 const title = document.querySelector('#title');
-const footer = document.querySelector('footer');
+const copyright = document.querySelector('.copyright');
 const header = document.querySelector('header');
 const content_area = document.querySelector('.content-area');
 const search_bar = document.querySelector('.search-bar')
@@ -78,10 +78,37 @@ fetch("https://raw.githubusercontent.com/ZoeyLe3294/wiki_webpage/main/Website/as
 //     let searchResult = search_list_generate (entry)
 //     return {id:entry.id, category:entry.category, name:entry.name, language:entry.language, element:searchResult}
 // })
+// menu_button[0].classList.add('popin-anim');
+// for (let i=1;i<menu_button.length;i++){
+//     menu_button[i-1].addEventListener('animationstart',()=>{
+//         console.log('animate start');
+//         menu_button[i].classList.add('popin-anim');
+//     })    
+// }
+let animDelay = 0;
+let animDuration = 0.5;
 title.addEventListener('animationend',() => {
-    footer.classList.add('fade-in-anim');
-    header.classList.add('fade-in-anim');
+    for (let i=0;i<menu_button.length;i++){
+        menu_button[menu_button.length-i-1].classList.add('popin-anim');
+        animDelay+=0.1;
+        menu_button[menu_button.length-i-1].style.animationDelay = animDelay+'s';
+    }
+    animDelay+=0.3;
+    header.classList.add('popin-anim');
+    copyright.classList.add('popin-anim');
+    header.style.animationDelay = animDelay+'s';
+    copyright.style.animationDelay = animDelay+'s';
 },{once:true})
+
+header.addEventListener('animationend',() => {
+    menu_button.forEach(item=>{
+        item.classList.remove('popin-anim');
+        item.style.animationDelay = '';
+        item.style.opacity = 1;
+    })
+})
+
+
 search_icon.addEventListener('click',()=>{
     search_bar.classList.toggle('active');
     search_input.value="";
@@ -102,30 +129,34 @@ search_input.addEventListener("input",(e)=>{
 })
 let cardMenu_isOpen = false;
 let content_isOpen = false;
-menu_button.forEach(item => item.addEventListener('click',activeLink));
+menu_button.forEach(item => {item.addEventListener('click',activeLink)});
 function activeLink(){
     let id = this.id;
-    menu_button.forEach((item) => {
-        let current_texttile = item.parentNode.querySelector('.texttile');
-        if(current_texttile) {
-            if (item.id == id) {
-                current_texttile.classList.toggle('active'); 
-            }else {
-                current_texttile.classList.remove('active');
-            }
-        }
-    })
-    
+    // menu_button.forEach((item) => {
+    //     let current_texttile = item.parentNode.querySelector('.texttile');
+    //     if(current_texttile) {
+    //         if (item.id == id) {
+    //             current_texttile.classList.toggle('active'); 
+    //         }else {
+    //             current_texttile.classList.remove('active');
+    //         }
+    //     }
+    // })
+
+    console.log(current_btn)
+    console.log(id)
     if (current_btn) {
         if (current_btn==id) {
             card_menu_anim(false)
             menu_button.forEach((item)=>{
-                if (item.id != id) {
-                    item.classList.toggle('scale-reset-anim');
-                    item.classList.remove('scale-down-anim');
-                    item.classList.toggle('inactive');
-                }else{
-                    item.classList.toggle('active');
+                if(item.id!='scan_btn'){
+                    if (item.id != id) {
+                        item.classList.toggle('scale-reset-anim');
+                        item.classList.remove('scale-down-anim');
+                        item.classList.toggle('inactive');
+                    }else{
+                        item.classList.toggle('active');
+                    }                    
                 }
             })
             search_bar.classList.remove('active');
@@ -139,16 +170,19 @@ function activeLink(){
 
             card_menu_anim(true)
             menu_button.forEach((item)=>{
-                if (item.id == id) {
-                   item.classList.remove('scale-down-anim');
-                   item.classList.toggle('active');
-                   item.classList.toggle('inactive');
-                }else{
-                    item.classList.add('scale-down-anim');
-                    item.classList.remove('scale-reset-anim');
-                    item.classList.remove('active');
-                    item.classList.add('inactive');
+                if(item.id!='scan_btn') {
+                    if (item.id == id) {
+                    item.classList.remove('scale-down-anim');
+                    item.classList.toggle('active');
+                    item.classList.toggle('inactive');
+                    }else {
+                        item.classList.add('scale-down-anim');
+                        item.classList.remove('scale-reset-anim');
+                        item.classList.remove('active');
+                        item.classList.add('inactive');
+                    }
                 }
+
             })
             current_btn = id;
         }
@@ -156,32 +190,38 @@ function activeLink(){
         content_isOpen ? card_menu_anim(true) : card_menu_anim(false)
         card_menu_list_generate(this.value)
         menu_button.forEach((item)=>{
-            if (item.id != id) {
-                item.classList.add('scale-down-anim') ;
-                item.classList.remove('scale-reset-anim') ;
-                item.classList.toggle('inactive');
-            }else{
-                item.classList.toggle('active');
+            if(item.id!='scan_btn') {
+                if (item.id != id) {
+                    item.classList.add('scale-down-anim') ;
+                    item.classList.remove('scale-reset-anim') ;
+                    item.classList.toggle('inactive');
+                }else{
+                    item.classList.toggle('active');
+                }
             }
+
         })
         title.classList.add('close');
         current_btn = id;
+        console.log(current_btn)
     }
     
 
 }
 function card_menu_Promise (){
     const myCardPromise = new Promise((resolve, reject) => {
-            card_menu.classList.add('close');
-            card_menu.classList.remove('open');
+            card_menu.classList.add('close-anim');
+            card_menu.classList.remove('open-anim');
             resolve('success');
       });
     return myCardPromise
 }
 function content_Promise (){
     const myContentPromise = new Promise((resolve, reject) => {
-            contentListContainer.classList.add('inactive');
-            contentListContainer.classList.remove('active');
+            // contentListContainer.classList.add('inactive');
+            // contentListContainer.classList.remove('active');
+            content_area.classList.add('fade-out-anim');
+            content_area.classList.remove('fade-in-anim');
             resolve('success');
       });
     return myContentPromise
@@ -191,52 +231,58 @@ function card_menu_anim(repeat){
         if (cardMenu_isOpen){
             card_menu_Promise().then((message)=>{
                 setTimeout(() => {
-                    card_menu.classList.add('open');
-                    card_menu.classList.remove('close');
+                    card_menu.classList.add('open-anim');
+                    card_menu.classList.remove('close-anim');
                 }, ANIM_DURATION);
             })
         } else {
-            card_menu.classList.add('open');
-            card_menu.classList.remove('close');
+            card_menu.classList.add('open-anim');
+            card_menu.classList.remove('close-anim');
             cardMenu_isOpen = true;
         }
         if (content_isOpen){
             content_Promise().then((message)=>{
                 setTimeout(() => {
-                    contentListContainer.classList.add('active');
-                    contentListContainer.classList.remove('inactive');
+                    // contentListContainer.classList.add('active');
+                    // contentListContainer.classList.remove('inactive');
+                    content_area.classList.add('fade-in-anim');
+                    content_area.classList.remove('fade-out-anim');
                 }, ANIM_DURATION);
             })
         } else {
-            contentListContainer.classList.add('active');
-            contentListContainer.classList.remove('inactive');  
+            // contentListContainer.classList.add('active');
+            // contentListContainer.classList.remove('inactive');  
+            content_area.classList.add('fade-in-anim');
+            content_area.classList.remove('fade-out-anim');
             content_isOpen = true;
         }
     }else{
 
         if (cardMenu_isOpen){
-            card_menu.classList.add('close');
-            card_menu.classList.remove('open');
+            card_menu.classList.add('close-anim');
+            card_menu.classList.remove('open-anim');
             cardMenu_isOpen = false;
         } else {
-            card_menu.classList.add('open');
-            card_menu.classList.remove('close');
+            card_menu.classList.add('open-anim');
+            card_menu.classList.remove('close-anim');
             cardMenu_isOpen = true;
         }
         if (content_isOpen){
-            contentListContainer.classList.add('inactive');
-            contentListContainer.classList.remove('active'); 
-            content_area.classList.remove('focus');
+            // contentListContainer.classList.add('inactive');
+            // contentListContainer.classList.remove('active'); 
+            content_area.classList.remove('fade-in-anim');
+            content_area.classList.add('fade-out-anim');
             content_isOpen = false;
         } else {
-            contentListContainer.classList.add('active');
-            contentListContainer.classList.remove('inactive'); 
-            content_area.classList.add('focus'); 
+            // contentListContainer.classList.add('active');
+            // contentListContainer.classList.remove('inactive');
+            content_area.classList.add('fade-in-anim');
+            content_area.classList.remove('fade-out-anim');
             content_isOpen = true;
         }
     }
-    console.log('cardMenu_isOpen '+cardMenu_isOpen)
-    console.log('content_isOpen '+content_isOpen)
+    // console.log('cardMenu_isOpen '+cardMenu_isOpen)
+    // console.log('content_isOpen '+content_isOpen)
 }
 function card_menu_list_generate(val){
     linkListContainer.innerHTML=''
@@ -246,7 +292,7 @@ function card_menu_list_generate(val){
             //load link_list
             const linkList = linkListTemplate.content.cloneNode(true).children[0]
             const link = linkList.querySelector('[data-header]')
-            link.textContent = result.name.toUpperCase()
+            link.textContent = result.name.toLowerCase()
             linkList.addEventListener('click',()=>{
                 document.getElementById(result.name.toLowerCase()).scrollIntoView({behavior: 'smooth' })
             })
@@ -256,7 +302,7 @@ function card_menu_list_generate(val){
             const content_title = contentList.querySelector('.content-title')
             const content_description = contentList.querySelector('.content-description')
             const content_detail = contentList.querySelector('.content-detail')
-            content_title.textContent = result.name
+            content_title.textContent = result.name.toUpperCase()
             content_title.id = result.name.toLowerCase()
             content_description.textContent = result.context
             content_detail.textContent = result.detail
@@ -283,12 +329,12 @@ function search_list_generate (data) {
     name.textContent = data.name.toUpperCase()
     //set anchor link ...
     searchResult.addEventListener('click',()=>{
-        title.classList.add('close');
+        title.classList.add('close-anim');
         
-        card_menu.classList.remove('close');
-        card_menu.classList.remove('open');
+        card_menu.classList.remove('close-anim');
+        card_menu.classList.remove('open-anim');
 
-        content_area.classList.add('focus');
+        // content_area.classList.add('focus');
         contentListContainer.innerHTML=''
         const result = card_data.filter((res)=>{
             return res.name.toUpperCase()==data.name.toUpperCase()
@@ -328,7 +374,10 @@ document.onclick = function (e){
         search_box.classList.add("hide");
     }
 }
-
+function toggleNav() {
+    document.body.classList.toggle("nav-open");
+    document.querySelector(".nav-links-container").classList.toggle("fade-out-anim");
+  }
 // const btn = document
 //     .querySelector('.read-more-btn');
 
@@ -351,7 +400,5 @@ document.onclick = function (e){
 //         const currentText = e.target.parentNode.querySelector('.card__read-more');
 
 //         currentText.classList.toggle('card__read-more--open');
-
-//         // current.textContent = current.textContent.includes('Read More...') ? 'Read Less...' : 'Read More...';
 
 //     });
