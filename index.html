@@ -23,12 +23,13 @@
                 <!-- <h2 class="logo">Betrayal at House on the Hill</h2> -->
                 <div class="search d-flex jc-right ai-center">
                     <div class="search-bar d-flex pos-rel jc-space-between ai-center">
-                        <input type="text" placeholder="Search..." id="mySearch">
+                        <input type="text" placeholder="Search..." id="mySearch" autocomplete="off">
                         <i class="fa-solid fa-xmark" id="icon-clear"></i>
                         <div class="search-box pos-abs hide" id="search-box"></div>
                         <template search-result-list>
                             <div class="search-link" link>
-                                <img src="" alt="">
+                                <div class="icon"></div>
+                                <!-- <img src="" alt=""> -->
                                 <div class="search-content">
                                     <h2 name></h2>
                                 </div>
@@ -45,26 +46,42 @@
                 </div>
             </header>
         
-            <section class="sub-container d-flex jc-space-between">
-                <div class="card-menu focus" card-list-container></div>
-                <template data-card-list-template>
-                    <div class="card">
-                        <h2 class="card-list-details" data-header></h2>
+            <section class="sub-container d-flex">
+                <!-- layout for rule -->
+                <div class ="rules-section pos-abs">
+                    <div class="rule-container focus">
+                        <h2>LUẬT CHƠI</h2>
+                        <p>The brown fox jumps over the fence</p>
                     </div>
-                </template>            
-                <div class="content-area d-flex pos-rel jc-center fade-in-anim">
-                        <ul class="content-list" content-list-container></ul>
-                        <template content-list-template>
-                            <li class="content" >
-                                <div class="row_name">
-                                    <h2 class="content-title">Click</h2>
-                                    <p class="content-description">What is Lorem Ipsum?</p>
-                                </div>
-                                <div class="row_detail">
-                                    <p class="content-detail">What is Lorem Ipsum?</p>
-                                </div>
-                            </li>
-                        </template>
+                </div>
+                <!-- layout for cards -->
+                <div class ="cards-section pos-abs">
+                    <div class="card-container d-flex jc-space-between">
+                        <div class="card-menu focus" card-list-container></div>
+                        <template data-card-list-template>
+                            <div class="card">
+                                <h2 class="card-list-details" data-header></h2>
+                            </div>
+                        </template>            
+                        <div class="content-area d-flex pos-rel jc-center">
+                                <ul class="content-list" content-list-container></ul>
+                                <template content-list-template>
+                                    <li class="content" >
+                                        <div class="row_name">
+                                            <h2 class="content-title">Click</h2>
+                                            <p class="content-description">What is Lorem Ipsum?</p>
+                                        </div>
+                                        <div class="row_detail">
+                                            <p class="content-detail">What is Lorem Ipsum?</p>
+                                        </div>
+                                    </li>
+                                </template>
+                        </div>     
+                    </div>
+                </div>
+                <!-- layout for scan -->
+                <div class="scan-section pos-abs">
+
                 </div>
         
             </section>
