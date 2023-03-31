@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/b89ba1819a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400&family=Baloo+Tamma+2&family=Grandstander&family=Grenze+Gotisch&family=Itim&family=Lemonada:wght@300&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 <body>
     <div class="bg-image pos-abs"></div>
     <div class="overlay pos-abs"></div>
@@ -47,6 +47,7 @@
             </header>
         
             <section class="sub-container d-flex">
+                
                 <!-- layout for rule -->
                 <div class ="rules-section pos-abs">
                     <div class="rule-container focus">
@@ -81,9 +82,31 @@
                 </div>
                 <!-- layout for scan -->
                 <div class="scan-section pos-abs">
-
+                    <div id="reader" width="600px"></div>
+                    <div id="result" width="600px"></div>
                 </div>
-        
+                <script>
+                    const scanner = new Html5QrcodeScanner('reader',{
+                        qrbox:{
+                            width:250,
+                            height:250,
+                        },
+                        fps:20,
+                    });
+                    scanner.render(success, error);
+                    function success(result){
+                        console.log(result);
+                        document.getElementById('result').innerHTML = `
+                        <h2>Success!</h2>
+                        <p><a href=${result}>${result}></a></p>
+                        `;
+                        scanner.clear();
+                        document.getElementById('reader').remove();
+                    }
+                    function error (err){
+                        console.log(err);
+                    }
+                </script>
             </section>
         
             <footer class="d-flex jc-space-between">
