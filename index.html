@@ -12,12 +12,35 @@
 <body>
     <div class="bg-image pos-abs"></div>
     <div class="overlay pos-abs"></div>
-
-      <!-- <div class="menu-burger">
+    <nav>
         <input type="checkbox" id="active" onclick="toggleNav()">
         <label for="active" class="menu-btn"><span></span></label>
-        <label for="active" class="close"></label>
-      </div> -->
+        <div class="wrapper pos-abs slide-up-out-anim">
+            <ul class="pos-abs d-flex fd-column ai-center">
+                <li class="d-flex jc-space-around ai-center" onclick="toggleNav()">
+                    <img src="/Website/assets/img/BetrayalHouseHill_v4.svg">
+                    <h2>Luật Chơi</h2>
+                </li>
+                <li class="d-flex jc-space-around ai-center" onclick="toggleNav()">
+                    <img src="/Website/assets/img/icon_event.svg">
+                    <h2>Sự Kiện</h2>
+                </li>
+                <li class="d-flex jc-space-around ai-center" onclick="toggleNav()">
+                    <img src="/Website/assets/img/icon_item.svg">
+                    <h2>Vật Phẩm</h2>
+                </li>
+                <li class="d-flex jc-space-around ai-center" onclick="toggleNav()">
+                    <img src="/Website/assets/img/icon_omen.svg">
+                    <h2>Điềm Báo</h2>
+                </li>
+                <li class="d-flex jc-space-around ai-center" onclick="toggleNav()">
+                    <img src="/Website/assets/img/icon_room.svg">
+                    <h2>Lát Phòng</h2>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
         <div class="main">
             <header class="d-flex jc-space-between ai-center">
                 <!-- <h2 class="logo">Betrayal at House on the Hill</h2> -->
@@ -56,7 +79,7 @@
                     </div>
                 </div>
                 <!-- layout for cards -->
-                <div class ="cards-section pos-abs">
+                <div class ="cards-section">
                     <div class="card-container d-flex jc-space-between">
                         <div class="card-menu focus" card-list-container></div>
                         <template data-card-list-template>
@@ -82,77 +105,60 @@
                 </div>
                 <!-- layout for scan -->
                 <div class="scan-section pos-abs">
-                    <div id="reader" width="600px"></div>
-                    <div id="result" width="600px"></div>
+                    <div class="scan-container d-inline-flex ai-center jc-space-around focus">
+                        <div id="reader"></div>
+                        <div id="result" class="content">
+                            <div class="row_name">
+                                <h2 class="content-title">Click</h2>
+                                <p class="content-description">What is Lorem Ipsum?</p>
+                            </div>
+                            <div class="row_detail">
+                                <p class="content-detail">What is Lorem Ipsum?</p>
+                            </div>
+                        </div>                        
+                    </div>
                 </div>
-                <script>
-                    const scanner = new Html5QrcodeScanner('reader',{
-                        qrbox:{
-                            width:250,
-                            height:250,
-                        },
-                        fps:20,
-                    });
-                    scanner.render(success, error);
-                    function success(result){
-                        console.log(result);
-                        document.getElementById('result').innerHTML = `
-                        <h2>Success!</h2>
-                        <p><a href=${result}>${result}></a></p>
-                        `;
-                        scanner.clear();
-                        document.getElementById('reader').remove();
-                    }
-                    function error (err){
-                        console.log(err);
-                    }
-                </script>
             </section>
         
-            <footer class="d-flex jc-space-between">
-                <p class="copyright">© GROUP TITLE 2015</p>
-                <ul class="menu d-flex">
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile">Luật Chơi</span>
+            <footer class="d-flex jc-space-between ai-end">
+                <p class="copyright">© ZOEY_LE 2023</p>
+                <ul class="menu d-flex ai-end">
+                    <li class="list">
                         <button id="rule_btn" value="rule">
-                            <span class="icon pos-rel d-flex jc-center">
+                            <span class="icon">
                                 <img src="/Website/assets/img/BetrayalHouseHill_v4.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile">Sự Kiện</span>
+                    <li class="list">
                         <button id="event_btn" value="event">
-                            <span class="icon pos-rel d-flex jc-center">
+                            <span class="icon">
                                 <img src="/Website/assets/img/icon_event.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile">Vật Phẩm</span>
+                    <li class="list">
                         <button id="item_btn" value="item">
-                            <span class="icon pos-rel d-flex jc-center">
+                            <span class="icon">
                                 <img src="/Website/assets/img/icon_item.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile">Điềm Báo</span>
+                    <li class="list">
                         <button id="omen_btn" value="omen">
-                            <span class="icon pos-rel d-flex jc-center">
+                            <span class="icon">
                                 <img src="/Website/assets/img/icon_omen.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list d-flex fd-column jc-center ai-center">
-                        <span class="texttile">Lát Phòng</span>
+                    <li class="list">
                         <button id="room_btn" value="room">
-                            <span class="icon pos-rel d-flex jc-center">
+                            <span class="icon">
                                 <img src="/Website/assets/img/icon_room.svg">
                             </span>
                         </button>
                     </li>
-                    <li class="list qr-button d-flex fd-column jc-center ai-center">
+                    <li class="list">
                         <button id="scan_btn" value="scan"></button>
                     </li>
                 </ul>
@@ -177,3 +183,11 @@
 
 </html>
 <script src="/Website/js/script.js"></script>
+<script>
+    function toggleNav(){
+        document.querySelector('.wrapper').classList.toggle('slide-up-out-anim');
+        document.querySelector('.wrapper').classList.toggle('slide-up-in-anim');
+        document.querySelector('#active').classList.toggle('checked');
+        document.querySelector('#title').classList.toggle('close');
+    }
+</script>

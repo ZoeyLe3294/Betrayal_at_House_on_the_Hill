@@ -15,6 +15,8 @@ const sub_container = document.querySelector('.sub-container');
 
     //Scan section
     const scan_section = document.querySelector('.scan-section');
+    const scan_btn = document.querySelector('#scan_btn');
+    const result_sec = document.getElementById('result');
 
 //Header section
 const header = document.querySelector('header');
@@ -33,6 +35,9 @@ const title = document.querySelector('#title');
 const copyright = document.querySelector('.copyright');
 const menu_button = document.querySelectorAll('.menu button');
 
+//Nav section
+const menu_btn = document.querySelector('.menu-btn');
+
 // PARA DECLARE
 const ANIM_DURATION = 300
 let current_btn;
@@ -49,6 +54,7 @@ fetch("https://raw.githubusercontent.com/ZoeyLe3294/wiki_webpage/main/Website/as
             return {id:entry.id, category:entry.category, name:entry.name, language:entry.language, element:searchResult}
         })
     })
+    
 // card_data = [
 //     {
 //         "id": "1",
@@ -70,10 +76,13 @@ title.addEventListener('animationend',() => {
         menu_button[menu_button.length-i-1].style.animationDelay = animDelay+'s';
     }
     animDelay+=0.3;
+    menu_btn.classList.add('popin-anim');
     header.classList.add('popin-anim');
     copyright.classList.add('popin-anim');
+    menu_btn.style.animationDelay = animDelay+'s';
     header.style.animationDelay = animDelay+'s';
     copyright.style.animationDelay = animDelay+'s';
+    
 },{once:true})
 
 header.addEventListener('animationend',() => {
@@ -211,8 +220,8 @@ function activeLink(){
 }
 function card_menu_Promise (){
     const myCardPromise = new Promise((resolve, reject) => {
-            card_menu.classList.add('close-anim');
-            card_menu.classList.remove('open-anim');
+            card_menu.classList.add('slide-out-left-anim');
+            card_menu.classList.remove('slide-in-left-anim');
             resolve('success');
       });
     return myCardPromise
@@ -231,13 +240,13 @@ function card_menu_anim(isRepeat){
         if (cardMenu_isOpen){
             card_menu_Promise().then((message)=>{
                 setTimeout(() => {
-                    card_menu.classList.add('open-anim');
-                    card_menu.classList.remove('close-anim');
+                    card_menu.classList.add('slide-in-left-anim');
+                    card_menu.classList.remove('slide-out-left-anim');
                 }, ANIM_DURATION);
             })
         } else {
-            card_menu.classList.add('open-anim');
-            card_menu.classList.remove('close-anim');
+            card_menu.classList.add('slide-in-left-anim');
+            card_menu.classList.remove('slide-out-left-anim');
             cardMenu_isOpen = true;
         }
         if (content_isOpen){
@@ -255,12 +264,12 @@ function card_menu_anim(isRepeat){
     }else{
 
         if (cardMenu_isOpen){
-            card_menu.classList.add('close-anim');
-            card_menu.classList.remove('open-anim');
+            card_menu.classList.add('slide-out-left-anim');
+            card_menu.classList.remove('slide-in-left-anim');
             cardMenu_isOpen = false;
         } else {
-            card_menu.classList.add('open-anim');
-            card_menu.classList.remove('close-anim');
+            card_menu.classList.add('slide-in-left-anim');
+            card_menu.classList.remove('slide-out-left-anim');
             cardMenu_isOpen = true;
         }
         if (content_isOpen){
@@ -366,4 +375,49 @@ document.onclick = function (e){
     }
 }
 
+scan_btn.addEventListener('click',scanExe);
+function scanExe () {
+    const scanner = new Html5QrcodeScanner('reader',{
+        qrbox:{
+            width:250,
+            height:250,
+        },
+        fps:20,
+    });
+    scanner.render(success, error);
+    // result=1
+    // result=String(result);
+    // let scanSearchRes = card_data.filter((card)=>{return card.id == result})[0]
+    // console.log(scanSearchRes);
+    // const result_sec = document.getElementById('result')
+    // const content_title = result_sec.querySelector('.content-title')
+    // const content_description = result_sec.querySelector('.content-description')
+    // const content_detail = result_sec.querySelector('.content-detail')
+    // content_title.textContent = scanSearchRes.name.toUpperCase()
+    // content_title.id = scanSearchRes.name.toLowerCase()
+    // content_description.textContent = scanSearchRes.context
+    // content_detail.textContent = scanSearchRes.detail
+    function success(result){
+        // result=1
+        result=String(result);
+        let scanSearchRes = card_data.filter((card)=>{return card.id == result})[0]
+        console.log(scanSearchRes);
+        const content_title = result_sec.querySelector('.content-title');
+        const content_description = result_sec.querySelector('.content-description');
+        const content_detail = result_sec.querySelector('.content-detail');
+        content_title.textContent = scanSearchRes.name.toUpperCase();
+        content_title.id = scanSearchRes.name.toLowerCase();
+        content_description.textContent = scanSearchRes.context;
+        content_detail.textContent = scanSearchRes.detail;
+        // document.getElementById('result').innerHTML = `
+        // <h2>Success!</h2>
+        // <p><a href=${result}>${result}></a></p>
+        // `;
+        scanner.clear();
+        // document.getElementById('reader').remove();
+    }
+    function error (err){
+        console.log(err);
+    }   
+}
 
