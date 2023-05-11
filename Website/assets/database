@@ -2,7 +2,7 @@
     {
         "id": "1",
         "category": "item",
-        "name": "Axe ",
+        "name": "Axe",
         "language": "vi",
         "context": "Rất bén",
         "detail": "Tăng 1 cục xúc xắc khi thực hiện tấn công"
@@ -10,7 +10,7 @@
     {
         "id": "2",
         "category": "item",
-        "name": "Sacrificial Dagger ",
+        "name": "Sacrificial Dagger",
         "language": "vi",
         "context": "1 mảnh sắt được tạo hình và bao phủ bởi những biểu tượng bí ẩn và nhuốm màu máu ",
         "detail": "Tăng 3 cục xúc xắc cho tấn công Might\nĐổi lại: đổ Knowledge xúc xắc\n6+ Bình an\n3-5 Mất 1 điểm tinh thần\n0-2 Nhận 2 xúc xắc phản dame vật lý và không thể thực hiện tấn công"
@@ -18,7 +18,7 @@
     {
         "id": "3",
         "category": "item",
-        "name": "Blood Dagger ",
+        "name": "Blood Dagger",
         "language": "vi",
         "context": "Con dao 2 lưỡi. Hút máu chủ sở hữu để hoạt động ",
         "detail": "Sử dụng 1 Speed tăng 3 cục xúc xắc khi thực hiện tấn công.\nKhông thể bỏ lại hoặc trao đổi\nNếu bị cướp, chịu 2 cục xúc xắc sát thương vật lý"
@@ -26,7 +26,7 @@
     {
         "id": "4",
         "category": "item",
-        "name": "Revolver ",
+        "name": "Revolver",
         "language": "vi",
         "context": "Món vũ khí tuy cũ nhưng có lực ",
         "detail": "Tăng 1 cục xúc xắc cho tấn công tầm gần hoặc tầm xa bằng Speed và gây sát thương vật lý"
@@ -34,7 +34,7 @@
     {
         "id": "5",
         "category": "item",
-        "name": "Medical Kit ",
+        "name": "Medical Kit",
         "language": "vi",
         "context": "Túi y tế  ",
         "detail": "Đổ Knowledge để có cơ hội hồi máu khởi điểm cho bản thân hoặc đồng minh cùng phòng:\n8+ Tăng tối đa 3 điểm chỉ số vật lý\n6-7 Tăng tối đa 2 điểm chỉ số vật lý\n4-5 Tăng 1 điểm chỉ số vật lý\n0-3 Không hiệu quả"
@@ -42,7 +42,7 @@
     {
         "id": "6",
         "category": "item",
-        "name": "Healing Salve ",
+        "name": "Healing Salve",
         "language": "vi",
         "context": "1 hỗn hợp keo dính trong 1 cái tô rỗng ",
         "detail": "Hồi Might và Speed về lại khởi điểm cho bản thân hoặc cho 1 người cùng phòng\n1 lần/game"
@@ -50,7 +50,7 @@
     {
         "id": "7",
         "category": "item",
-        "name": "Smelling Salts ",
+        "name": "Smelling Salts",
         "language": "vi",
         "context": "Hít! 1 hơi đầy lồng ngực ",
         "detail": "Hồi chỉ số Knowledge về khởi điểm cho bản thân hoặc cho 1 người cùng phòng\n1 lần/game"
@@ -58,7 +58,7 @@
     {
         "id": "8",
         "category": "item",
-        "name": "Bottle ",
+        "name": "Bottle",
         "language": "vi",
         "context": "1 cái chai đục chứa 1 chất dịch đen bên trong ",
         "detail": "Sau khi kích hoạt Haunted, bạn có thể đổ 3 xúc xắc để uống nước trong lọ và nhận hiệu ứng sau:\n6 Tiến tới 1 phòng bất kỳ\n5 Nhận 2 Might, 2 Speed\n4 Nhận 2 Knowledge, 2 Sanity\n3 Nhận 1 Knowledge, Mất 1 Might\n2 Mất 2 Knowledge, 2 Sanity\n1 Mất 2 Might, 2 Speed\n0 Mất 2 điểm ở mọi chỉ số\n1 lần/game"
@@ -66,7 +66,7 @@
     {
         "id": "9",
         "category": "item",
-        "name": "Amulet Of The Ages ",
+        "name": "Amulet Of The Ages",
         "language": "vi",
         "context": "Vòng đeo bằng bạc cổ, khảm ngọc và lan tỏa phước lành ",
         "detail": "Tăng 1 Might, 1 Speed, 1 Knowledge, 1 Sanity khi sở hữu vật phẩm"
@@ -74,7 +74,7 @@
     {
         "id": "10",
         "category": "item",
-        "name": "Pickpocket’S Gloves ",
+        "name": "Pickpocket’S Gloves",
         "language": "vi",
         "context": "Tự lực cánh sinh chưa bao giờ dễ dàng đến thế ",
         "detail": "Sử dụng item này để lấy 1 vật phẩm bất kỳ từ 1 người cùng phòng\n1 lần / game"
@@ -82,7 +82,7 @@
     {
         "id": "11",
         "category": "item",
-        "name": "Armor ",
+        "name": "Armor",
         "language": "vi",
         "context": "Bộ giáp đạo cụ từ 1 hộ chợ thời kỳ Phục Hưng, dù sao thì vẫn làm bằng kim loại ",
         "detail": "Giảm 1 dame cho bất kỳ sát thương vật lý ở mọi thời điểm\nKhông thể bị cướp"
@@ -90,7 +90,7 @@
     {
         "id": "12",
         "category": "item",
-        "name": "Rabbit’S Foot ",
+        "name": "Rabbit’S Foot",
         "language": "vi",
         "context": "Chú thỏ xấu số ",
         "detail": "Đổ lại 1 cục xúc xắc"
@@ -98,7 +98,7 @@
     {
         "id": "13",
         "category": "item",
-        "name": "Idol ",
+        "name": "Idol",
         "language": "vi",
         "context": "Có lẽ nó chọn bạn cho 1 mục đích cao cả hơn. Như là hiến mạng ",
         "detail": "Sử dụng 1 Sanity tăng 2 cục xúc xắc cho lần đổ xúc xắc bất kỳ"
@@ -106,7 +106,7 @@
     {
         "id": "14",
         "category": "item",
-        "name": "Dark Dice ",
+        "name": "Dark Dice",
         "language": "vi",
         "context": "Thời tới rồi ? ",
         "detail": "Đổ 3 cục xúc xắc:\n6 Dịch chuyển tới 1 người phe chính diện\n5 Đá 1 người cùng phòng sang phòng bên cạnh\n4 Tăng 1 chỉ số vật lý\n3 Dịch chuyển sang phòng bên cạnh\n2 Tăng 1 điểm tinh thần\n1 Rút 1 lá event\n0 Giảm tất cả chỉ số xuống mức thấp nhất rồi Vứt luôn lá này"
@@ -114,7 +114,7 @@
     {
         "id": "15",
         "category": "item",
-        "name": "Music Box ",
+        "name": "Music Box",
         "language": "vi",
         "context": "Món trang trí thủ công cổ, phát ra 1 giai điệu ma mị, đeo bám tâm trí bạn ",
         "detail": "Chọn trạng thái Mở hoặc Đóng Music Box\nMở: Nhân vật có Sanity cùng phòng phải đổ Sanity xúc xắc 4+. Thất bại, sẽ chịu hiệu ứng lú. Chủ sở hữu bị lú sẽ làm rớt Music Box xuống sàn\nĐóng: Loại bỏ hiệu ứng lú"
@@ -122,7 +122,7 @@
     {
         "id": "16",
         "category": "item",
-        "name": "Candle ",
+        "name": "Candle",
         "language": "vi",
         "context": "Làm di chuyển hình bóng - ít nhất, bạn hy vọng nó sẽ làm được như vậy ",
         "detail": "Tăng 1 cục xúc xắc khi đổ xúc xắc cho event card\nKhi sở hữu cả 3 vật phẩm Bell, Book và Candle tăng 2 điểm mỗi chỉ số"
@@ -130,7 +130,7 @@
     {
         "id": "17",
         "category": "item",
-        "name": "Lucky Stone ",
+        "name": "Lucky Stone",
         "language": "vi",
         "context": "1 hòn đá nhẵn bình thường nhưng bạn lại cảm thấy vận may từ nó ",
         "detail": "Chọn lại cục xúc xắc(s) bất kỳ để đổ lại trong bất kỳ lượt đổ\n1 lần / game"
@@ -138,7 +138,7 @@
     {
         "id": "18",
         "category": "item",
-        "name": "Angel Feather ",
+        "name": "Angel Feather",
         "language": "vi",
         "context": "Phe phẩy trong tay 1 chiếc lông hoàn hảo ",
         "detail": "Chọn kết quả cho 1 lần đổ xúc xắc bất kỳ\n1 lần/game"
@@ -146,7 +146,7 @@
     {
         "id": "19",
         "category": "item",
-        "name": "Bell ",
+        "name": "Bell",
         "language": "vi",
         "context": "Chuông đồng kêu vang ",
         "detail": "Tăng 1 Sanity khi sở hữu\nĐổ Sanity xúc xắc:\n5+: kéo 1 người chơi lại gần bạn 1 ô\n<5 & explorer: bị 1 quái tiến lại gần bạn 1 ô\n<5 & traitor: miễn\n<5 & 0 traitor: toàn bộ quái tiến lại gần bạn 1 ô\nKhi sở hữu cả 3 vật phẩm Bell, Book và Candle tăng 2 điểm mỗi chỉ số"
